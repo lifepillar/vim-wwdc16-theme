@@ -11,33 +11,6 @@ let colors_name = 'wwdc16'
 
 set background=dark
 
-" 0088cc
-" 333333
-" 666666
-" 999999
-" 0081c2 (background-color)
-" fafafa notification boxes
-" e6e6e6 border
-" ddd8b8 border (warning)
-" fefeee background-color (warning)
-" fb6473 border (alert)
-" f9d5d8 background-color (alert)
-" 50d84e border (success)
-" cff3cf background (success)
-" f46c0e border
-" cccccc
-
-" .color-mint-green { color: #95c76f;}
-" .color-orange { color: #d28e5d;}
-" .color-red { color: #dc3c3c;}
-" .color-fusia { color: #b73999;}
-" .color-purple { color: #8485ce;}
-" .color-forest-green { color: #64878f;}
-" .color-green { color: #52bd58;}
-" .color-blue-green { color: #00aba5;}
-" .color-blue { color: #4670d8;}
-" .bg-dark { background-color: #20222B; }
-
 let s:black       = ["#292c36", 0]
 let s:red         = ["#dc3c3c", 1]
 let s:forestgreen = ["#64878f", 2]
