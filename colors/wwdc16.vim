@@ -32,8 +32,8 @@ let s:fg           = ["fg", "fg"]
 
 fun! s:HL(group, fg, bg, ...) " ... optional dictionary of attributes
   execute 'hi!' a:group 'ctermfg='.a:fg[1] 'ctermbg='.a:bg[1] 'cterm='.(a:0>0?get(a:1,'cterm','NONE'):'NONE')
-                      \ 'guifg='.a:fg[0]   'guibg='a:bg[0]    'gui='.(a:0>0?get(a:1,'gui','NONE'):'NONE')
-                      \ 'guisp='.(a:0>0?get(a:1,'guisp','NONE'):'NONE')
+                      \   'guifg='.a:fg[0]   'guibg='.a:bg[0]   'gui='.(a:0>0?get(a:1,'gui','NONE'):'NONE')
+                      \   'guisp='.(a:0>0?get(a:1,'guisp','NONE'):'NONE')
 endf
 
 call s:HL("Normal",       s:white,       s:black)
