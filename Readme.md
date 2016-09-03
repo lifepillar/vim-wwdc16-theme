@@ -12,5 +12,5 @@ be expanded.
 Mandatory picture (might be slightly out of date), taken in Terminal.app using
 the Roboto Mono font (Terminal.app profile is included in the plugin):
 
-![WWDC16 Color Scheme](images/wwdc16.png)
+![WWDC16 Color Scheme](https://raw.github.com/lifepillar/Resources/master/wwdc16/wwdc16.png)
 
