@@ -106,7 +106,7 @@ call s:HL("WildMenu",                 s:white,       s:fusia)
 
 call s:HL("Boolean",                  s:mintgreen,   s:none)
 call s:HL("Character",                s:orange,      s:none)
-call s:HL("Comment",                  s:grey3,       s:none)
+call s:HL("Comment",                  s:grey3,       s:none,   {'gui': 'NONE,italic'})
 call s:HL("Constant",                 s:orange,      s:none)
 call s:HL("Debug",                    s:fusia,       s:none)
 call s:HL("Delimiter",                s:white,       s:none)
@@ -154,6 +154,9 @@ call s:HL("vimBracket",               s:bluegreen,   s:none)
 call s:HL("vimNotation",              s:bluegreen,   s:none)
 call s:HLink("vimUserFunc",           "Function")
 
+" Git
+call s:HL("gitcommitComment",         s:grey2,       s:none, {'gui': 'NONE,italic'})
+
 " Markdown
 call s:HL("markdownHeadingDelimiter", s:orange,      s:none)
 call s:HL("markdownURL",              s:purple,      s:none)
@@ -162,6 +165,16 @@ call s:HL("markdownURL",              s:purple,      s:none)
 call s:HLink("javascriptBraces", "Delimiter")
 
 
+" Terminal italic
+$append
+if get(g:, "wwdc16_term_italics", 0)
+  hi Comment cterm=italic
+  hi gitcommitComment cterm=italic
+endif
+.
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Demo :)
 silent tabnew WWDC16
 syn match   WWDC16S1 /"Hello, Vim!"\|packages\|available/
