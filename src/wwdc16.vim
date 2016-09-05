@@ -161,3 +161,35 @@ call s:HL("markdownURL",              s:purple,      s:none)
 " JavaScript
 call s:HLink("javascriptBraces", "Delimiter")
 
+
+" Demo :)
+silent tabnew WWDC16
+syn match   WWDC16S1 /"Hello, Vim!"\|packages\|available/
+syn match   WWDC16S2 /"November 2, 1991"\|learnAbout\|jobs/
+syn match   WWDC16S3 /let\|+/
+syn keyword WWDC16S4 print
+syn keyword WWDC16S5 channels gameChanging 1000
+syn keyword WWDC16S6 timers handsOn everywhere
+syn keyword WWDC16S7 100
+hi! link WWDC16S1 WWDC16Red
+hi! link WWDC16S2 WWDC16Mintgreen
+hi! link WWDC16S3 WWDC16Fusia
+hi! link WWDC16S4 WWDC16Bluegreen
+hi! link WWDC16S5 WWDC16Forestgreen
+hi! link WWDC16S6 WWDC16Orange
+hi! link WWDC16S7 WWDC16Purple
+
+insert
+print("Hello, Vim!")
+
+learnAbout(channels, jobs, timers, packages)
+
+let sessions = 100+
+let features = 1000+
+let tabs = handsOn
+let documentation = available
+let date = "November 2, 1991"
+let location = everywhere
+let Vim8 = gameChanging
+.
+
