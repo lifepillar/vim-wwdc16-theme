@@ -131,6 +131,22 @@ call s:HL("Todo",                     s:fusia,       s:none,   {'cterm': 'bold',
 call s:HL("Type",                     s:purple,      s:none)
 call s:HL("Underlined",               s:none,        s:none,   {'cterm': 'underline', 'gui': 'underline'})
 
+" WWDC16 color palette
+call s:HL("WWDC16Black", s:black, s:none)
+call s:HL("WWDC16Red", s:red, s:none)
+call s:HL("WWDC16Forestgreen", s:forestgreen, s:none)
+call s:HL("WWDC16Orange", s:orange, s:none)
+call s:HL("WWDC16Blue", s:blue, s:none)
+call s:HL("WWDC16Fusia", s:fusia, s:none)
+call s:HL("WWDC16Bluegreen", s:bluegreen, s:none)
+call s:HL("WWDC16Grey3", s:grey3, s:none)
+call s:HL("WWDC16Grey1", s:grey1, s:none)
+call s:HL("WWDC16Grey2", s:grey2, s:none)
+call s:HL("WWDC16Green", s:green, s:none)
+call s:HL("WWDC16Mintgreen", s:mintgreen, s:none)
+call s:HL("WWDC16Purple", s:purple, s:none)
+call s:HL("WWDC16White", s:white, s:none)
+
 " Vim
 call s:HL("vimMapModKey",             s:orange,      s:none)
 call s:HL("vimMapMod",                s:orange,      s:none)
