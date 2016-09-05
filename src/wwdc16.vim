@@ -36,7 +36,7 @@ fun! s:HLink(src, tgt)
   call append(line('$'),  'hi! link '.a:src.' '.a:tgt)
 endf
 
-silent tabnew wwdc16.vim
+silent tabnew +setlocal\ ft=vim
 insert
 " Name: WWDC16 colorscheme
 " Author:   Lifepillar <lifepillar@lifepillar.me>
@@ -176,7 +176,7 @@ endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Demo :)
-silent tabnew WWDC16
+silent tabnew
 syn match   WWDC16S1 /"Hello, Vim!"\|packages\|available/
 syn match   WWDC16S2 /"November 2, 1991"\|learnAbout\|jobs/
 syn match   WWDC16S3 /let\|+/
