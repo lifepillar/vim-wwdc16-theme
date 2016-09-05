@@ -27,11 +27,11 @@ features):
 
 - **Italics:**
 
-    let g:wwdc16_term_italics = 1
+        let g:wwdc16_term_italics = 1
 
 - **Transparent background:**
 
-    let g:wwdc16_term_trans_bg = 1
+        let g:wwdc16_term_trans_bg = 1
 
 
 ## Hacking
