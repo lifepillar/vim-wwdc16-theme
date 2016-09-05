@@ -28,7 +28,7 @@ fun! s:HL(group, fg, bg, ...) " ... is an optional dictionary of attributes
         \ 'guifg='   . a:fg[0],
         \ 'guibg='   . a:bg[0],
         \ 'gui='     . (a:0 > 0 ? get(a:1, 'gui', 'NONE') : 'NONE'),
-        \ 'guisp='   . (a:0>0?get(a:1, 'guisp', 'NONE') : 'NONE')
+        \ 'guisp='   . (a:0 > 0 ? get(a:1, 'guisp', 'NONE') : 'NONE')
         \ ]))
 endf
 
