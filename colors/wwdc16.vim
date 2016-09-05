@@ -1,134 +1,97 @@
-" 'wwdc16.vim' -- Vim color scheme.
-" Maintainer:   Lifepillar
+" Name: WWDC16 colorscheme
+" Author:   Lifepillar <lifepillar@lifepillar.me>
+" License: This file is placed in the public domain
 
 hi clear
-
 if exists('syntax_on')
   syntax reset
 endif
-
 let colors_name = 'wwdc16'
-
 set background=dark
 
-let s:black       = ["#292c36", 0]
-let s:red         = ["#dc3c3c", 1]
-let s:forestgreen = ["#64878f", 2]
-let s:orange      = ["#d28e5d", 3]
-let s:blue        = ["#4670d8", 4]
-let s:fusia       = ["#b73999", 5]
-let s:bluegreen   = ["#00aba5", 6]
-let s:grey3       = ["#999999", 7]
-let s:grey1       = ["#333333", 8]
-let s:grey2       = ["#666666", 9]
-let s:green       = ["#52bd58", 10]
-let s:mintgreen   = ["#95c76f", 11]
-let s:purple      = ["#8485ce", 13]
-let s:white       = ["#ffffff", 15]
-
-let s:none         = ["NONE", "NONE"]
-
-fun! s:HL(group, fg, bg, ...) " ... optional dictionary of attributes
-  execute 'hi' a:group  'ctermfg='.a:fg[1] 'ctermbg='.a:bg[1] 'cterm='.(a:0>0?get(a:1,'cterm','NONE'):'NONE')
-                      \   'guifg='.a:fg[0]   'guibg='.a:bg[0]   'gui='.(a:0>0?get(a:1,'gui','NONE'):'NONE')
-                      \   'guisp='.(a:0>0?get(a:1,'guisp','NONE'):'NONE')
-endf
-
-fun! s:HLink(src, tgt)
-  execute 'hi! link' a:src a:tgt
-endf
-
-if !has('gui_running') && get(g:, "wwdc16_transparent_bg", 0)
-  call s:HL("Normal",       s:white,       s:none)
+if !has('gui_running') && get(g:, "wwdc16_term_trans_bg", 0)
+  hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE
 else
-  call s:HL("Normal",       s:white,       s:black)
+  hi Normal ctermfg=15 ctermbg=0 cterm=NONE guifg=#ffffff guibg=#292c36 gui=NONE
 endif
 
-call s:HL("ColorColumn",              s:none,        s:grey1)
-call s:HL("Conceal",                  s:forestgreen, s:none)
-call s:HL("Cursor",                   s:none,        s:white)
-call s:HL("CursorIM",                 s:none,        s:white)
-call s:HL("CursorColumn",             s:none,        s:grey1)
-call s:HL("CursorLine",               s:none,        s:grey1)
-call s:HL("CursorLineNr",             s:white,       s:none)
-call s:HL("DiffAdd",                  s:black,       s:mintgreen)
-call s:HL("DiffChange",               s:white,       s:orange)
-call s:HL("DiffDelete",               s:white,       s:red)
-call s:HL("DiffText",                 s:white,       s:green,  {'cterm': 'bold',      'gui': 'bold'})
-call s:HL("Directory",                s:mintgreen,   s:none)
-call s:HL("EndOfBuffer",              s:grey2,       s:none)
-call s:HL("Error",                    s:white,       s:red)
-call s:HL("ErrorMsg",                 s:white,       s:red)
-call s:HL("FoldColumn",               s:grey2,       s:none)
-call s:HL("Folded",                   s:grey2,       s:none)
-call s:HL("IncSearch",                s:white,       s:orange)
-call s:HL("LineNr",                   s:grey2,       s:none)
-call s:HL("MatchParen",               s:white,       s:purple, {'cterm': 'bold',      'gui': 'bold'})
-call s:HL("ModeMsg",                  s:white,       s:none)
-call s:HL("MoreMsg",                  s:grey2,       s:none)
-call s:HL("NonText",                  s:white,       s:none)
-call s:HL("Pmenu",                    s:black,       s:forestgreen)
-call s:HL("PmenuSbar",                s:grey2,       s:grey1)
-call s:HL("PmenuSel",                 s:white,       s:orange)
-call s:HL("PmenuThumb",               s:grey2,       s:orange)
-call s:HL("Question",                 s:grey3,       s:none)
-call s:HL("Search",                   s:white,       s:orange)
-call s:HL("SignColumn",               s:grey2,       s:none)
-call s:HL("SpecialKey",               s:grey2,       s:none)
-call s:HL("SpellBad",                 s:none,        s:none,   {'cterm': 'underline', 'gui': 'undercurl', 'guisp': s:fusia[0]})
-call s:HL("SpellCap",                 s:purple,      s:none,   {'cterm': 'underline', 'gui': 'undercurl', 'guisp': s:fusia[0]})
-call s:HL("SpellLocal",               s:purple,      s:none,   {'cterm': 'underline', 'gui': 'undercurl', 'guisp': s:fusia[0]})
-call s:HL("SpellRare",                s:purple,      s:none,   {'cterm': 'underline', 'gui': 'undercurl', 'guisp': s:fusia[0]})
-call s:HL("StatusLine",               s:white,       s:forestgreen)
-call s:HL("StatusLineNC",             s:black,       s:forestgreen)
-call s:HL("TabLine",                  s:black,       s:forestgreen)
-call s:HL("TabLineFill",              s:black,       s:forestgreen)
-call s:HL("TabLineSel",               s:white,       s:none)
-call s:HL("Title",                    s:orange,      s:none,   {'cterm': 'bold',      'gui': 'bold'})
-call s:HL("VertSplit",                s:black,       s:forestgreen)
-call s:HL("Visual",                   s:white,       s:blue)
-call s:HL("VisualNOS",                s:white,       s:blue)
-call s:HL("WarningMsg",               s:red,         s:none)
-call s:HL("WildMenu",                 s:white,       s:fusia)
-
-call s:HL("Boolean",                  s:mintgreen,   s:none)
-call s:HL("Character",                s:orange,      s:none)
-call s:HL("Comment",                  s:grey3,       s:none)
-call s:HL("Constant",                 s:orange,      s:none)
-call s:HL("Debug",                    s:fusia,       s:none)
-call s:HL("Delimiter",                s:white,       s:none)
-call s:HL("Float",                    s:mintgreen,   s:none)
-call s:HL("Function",                 s:green,       s:none)
-call s:HL("Identifier",               s:bluegreen,   s:none)
-call s:HL("Ignore",                   s:white,       s:none)
-call s:HL("Include",                  s:red,         s:none)
-call s:HL("Keyword",                  s:forestgreen, s:none)
-call s:HL("Label",                    s:green,       s:none)
-call s:HL("Number",                   s:mintgreen,   s:none)
-call s:HL("Operator",                 s:bluegreen,   s:none)
-call s:HL("PreProc",                  s:red,         s:none)
-call s:HL("Special",                  s:red,         s:none)
-call s:HL("SpecialChar",              s:fusia,       s:none)
-call s:HL("SpecialComment",           s:fusia,       s:none)
-call s:HL("Statement",                s:forestgreen, s:none)
-call s:HL("StorageClass",             s:bluegreen,   s:none)
-call s:HL("String",                   s:mintgreen,   s:none)
-call s:HL("Structure",                s:red,         s:none)
-call s:HL("Todo",                     s:fusia,       s:none,   {'cterm': 'bold',      'gui': 'bold'})
-call s:HL("Type",                     s:purple,      s:none)
-call s:HL("Underlined",               s:none,        s:none,   {'cterm': 'underline', 'gui': 'underline'})
-
-" Vim
-call s:HL("vimMapModKey",             s:orange,      s:none)
-call s:HL("vimMapMod",                s:orange,      s:none)
-call s:HL("vimBracket",               s:bluegreen,   s:none)
-call s:HL("vimNotation",              s:bluegreen,   s:none)
-call s:HLink("vimUserFunc",           "Function")
-
-" Markdown
-call s:HL("markdownHeadingDelimiter", s:orange,      s:none)
-call s:HL("markdownURL",              s:purple,      s:none)
-
-" JavaScript
-call s:HLink("javascriptBraces", "Delimiter")
-
+hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
+hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
+hi Cursor ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE guisp=NONE
+hi CursorIM ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE guisp=NONE
+hi CursorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
+hi CursorLine ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
+hi CursorLineNr ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi DiffAdd ctermfg=0 ctermbg=11 cterm=NONE guifg=#292c36 guibg=#95c76f gui=NONE guisp=NONE
+hi DiffChange ctermfg=15 ctermbg=3 cterm=NONE guifg=#ffffff guibg=#d28e5d gui=NONE guisp=NONE
+hi DiffDelete ctermfg=15 ctermbg=1 cterm=NONE guifg=#ffffff guibg=#dc3c3c gui=NONE guisp=NONE
+hi DiffText ctermfg=15 ctermbg=10 cterm=bold guifg=#ffffff guibg=#52bd58 gui=bold guisp=NONE
+hi Directory ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
+hi EndOfBuffer ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi Error ctermfg=15 ctermbg=1 cterm=NONE guifg=#ffffff guibg=#dc3c3c gui=NONE guisp=NONE
+hi ErrorMsg ctermfg=15 ctermbg=1 cterm=NONE guifg=#ffffff guibg=#dc3c3c gui=NONE guisp=NONE
+hi FoldColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi Folded ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi IncSearch ctermfg=15 ctermbg=3 cterm=NONE guifg=#ffffff guibg=#d28e5d gui=NONE guisp=NONE
+hi LineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi MatchParen ctermfg=15 ctermbg=13 cterm=bold guifg=#ffffff guibg=#8485ce gui=bold guisp=NONE
+hi ModeMsg ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi MoreMsg ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi NonText ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi Pmenu ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi PmenuSbar ctermfg=9 ctermbg=8 cterm=NONE guifg=#666666 guibg=#333333 gui=NONE guisp=NONE
+hi PmenuSel ctermfg=15 ctermbg=3 cterm=NONE guifg=#ffffff guibg=#d28e5d gui=NONE guisp=NONE
+hi PmenuThumb ctermfg=9 ctermbg=3 cterm=NONE guifg=#666666 guibg=#d28e5d gui=NONE guisp=NONE
+hi Question ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
+hi Search ctermfg=15 ctermbg=3 cterm=NONE guifg=#ffffff guibg=#d28e5d gui=NONE guisp=NONE
+hi SignColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi SpecialKey ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#b73999
+hi SpellCap ctermfg=13 ctermbg=NONE cterm=underline guifg=#8485ce guibg=NONE gui=undercurl guisp=#b73999
+hi SpellLocal ctermfg=13 ctermbg=NONE cterm=underline guifg=#8485ce guibg=NONE gui=undercurl guisp=#b73999
+hi SpellRare ctermfg=13 ctermbg=NONE cterm=underline guifg=#8485ce guibg=NONE gui=undercurl guisp=#b73999
+hi StatusLine ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
+hi StatusLineNC ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi TabLine ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi TabLineFill ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi TabLineSel ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi Title ctermfg=3 ctermbg=NONE cterm=bold guifg=#d28e5d guibg=NONE gui=bold guisp=NONE
+hi VertSplit ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi Visual ctermfg=15 ctermbg=4 cterm=NONE guifg=#ffffff guibg=#4670d8 gui=NONE guisp=NONE
+hi VisualNOS ctermfg=15 ctermbg=4 cterm=NONE guifg=#ffffff guibg=#4670d8 gui=NONE guisp=NONE
+hi WarningMsg ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi WildMenu ctermfg=15 ctermbg=5 cterm=NONE guifg=#ffffff guibg=#b73999 gui=NONE guisp=NONE
+hi Boolean ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
+hi Character ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
+hi Comment ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
+hi Constant ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
+hi Debug ctermfg=5 ctermbg=NONE cterm=NONE guifg=#b73999 guibg=NONE gui=NONE guisp=NONE
+hi Delimiter ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi Float ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
+hi Function ctermfg=10 ctermbg=NONE cterm=NONE guifg=#52bd58 guibg=NONE gui=NONE guisp=NONE
+hi Identifier ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
+hi Ignore ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi Include ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi Keyword ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
+hi Label ctermfg=10 ctermbg=NONE cterm=NONE guifg=#52bd58 guibg=NONE gui=NONE guisp=NONE
+hi Number ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
+hi Operator ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
+hi PreProc ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi Special ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi SpecialChar ctermfg=5 ctermbg=NONE cterm=NONE guifg=#b73999 guibg=NONE gui=NONE guisp=NONE
+hi SpecialComment ctermfg=5 ctermbg=NONE cterm=NONE guifg=#b73999 guibg=NONE gui=NONE guisp=NONE
+hi Statement ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
+hi StorageClass ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
+hi String ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
+hi Structure ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi Todo ctermfg=5 ctermbg=NONE cterm=bold guifg=#b73999 guibg=NONE gui=bold guisp=NONE
+hi Type ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline guisp=NONE
+hi vimMapModKey ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
+hi vimMapMod ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
+hi vimBracket ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
+hi vimNotation ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
+hi! link vimUserFunc Function
+hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
+hi markdownURL ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
+hi! link javascriptBraces Delimiter
