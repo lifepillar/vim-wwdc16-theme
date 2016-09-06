@@ -54,7 +54,7 @@ hi StatusLine ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NO
 hi StatusLineNC ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi TabLine ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi TabLineFill ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
-hi TabLineSel ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi TabLineSel ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
 hi Title ctermfg=3 ctermbg=NONE cterm=NONE,bold guifg=#d28e5d guibg=NONE gui=NONE,bold guisp=NONE
 hi VertSplit ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi Visual ctermfg=4 ctermbg=15 cterm=NONE,reverse guifg=#4670d8 guibg=#ffffff gui=NONE,reverse guisp=NONE
