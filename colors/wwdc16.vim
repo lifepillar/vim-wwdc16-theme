@@ -101,6 +101,11 @@ hi WWDC16Green ctermfg=10 ctermbg=NONE cterm=NONE guifg=#52bd58 guibg=NONE gui=N
 hi WWDC16Mintgreen ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Purple ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
 hi WWDC16White ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
+hi NormalMode ctermfg=2 ctermbg=15 cterm=NONE,reverse guifg=#64878f guibg=#ffffff gui=NONE,reverse guisp=NONE
+hi InsertMode ctermfg=11 ctermbg=0 cterm=NONE,reverse guifg=#95c76f guibg=#292c36 gui=NONE,reverse guisp=NONE
+hi ReplaceMode ctermfg=3 ctermbg=0 cterm=NONE,reverse guifg=#d28e5d guibg=#292c36 gui=NONE,reverse guisp=NONE
+hi VisualMode ctermfg=4 ctermbg=15 cterm=NONE,reverse guifg=#4670d8 guibg=#ffffff gui=NONE,reverse guisp=NONE
+hi CommandMode ctermfg=5 ctermbg=15 cterm=NONE,reverse guifg=#b73999 guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi vimMapModKey ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 hi vimMapMod ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 hi vimBracket ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE

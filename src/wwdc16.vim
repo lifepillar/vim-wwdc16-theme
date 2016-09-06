@@ -147,6 +147,13 @@ call s:HL("WWDC16Mintgreen", s:mintgreen, s:none)
 call s:HL("WWDC16Purple", s:purple, s:none)
 call s:HL("WWDC16White", s:white, s:none)
 
+" Custom highlight groups for the main modes
+call s:HL("NormalMode",  s:forestgreen, s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+call s:HL("InsertMode",  s:mintgreen,   s:black,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+call s:HL("ReplaceMode", s:orange,      s:black,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+call s:HL("VisualMode",  s:blue,        s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+call s:HL("CommandMode", s:fusia,       s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+
 " Vim
 call s:HL("vimMapModKey",             s:orange,      s:none)
 call s:HL("vimMapMod",                s:orange,      s:none)
