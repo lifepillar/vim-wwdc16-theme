@@ -50,8 +50,8 @@ hi SpellBad ctermfg=NONE ctermbg=NONE cterm=NONE,underline guifg=NONE guibg=NONE
 hi SpellCap ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
 hi SpellLocal ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
 hi SpellRare ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
-hi StatusLine ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
-hi StatusLineNC ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi StatusLine ctermfg=2 ctermbg=15 cterm=NONE,reverse guifg=#64878f guibg=#ffffff gui=NONE,reverse guisp=NONE
+hi StatusLineNC ctermfg=2 ctermbg=0 cterm=NONE,reverse guifg=#64878f guibg=#292c36 gui=NONE,reverse guisp=NONE
 hi TabLine ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi TabLineFill ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi TabLineSel ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
