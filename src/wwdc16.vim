@@ -148,7 +148,7 @@ call s:HL("WWDC16Purple", s:purple, s:none)
 call s:HL("WWDC16White", s:white, s:none)
 
 " Custom highlight groups for the main modes
-call s:HL("NormalMode",  s:forestgreen, s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
+call s:HL("NormalMode",  s:grey2,       s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
 call s:HL("InsertMode",  s:mintgreen,   s:black,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
 call s:HL("ReplaceMode", s:orange,      s:black,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
 call s:HL("VisualMode",  s:blue,        s:white,  {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
