@@ -162,18 +162,18 @@ call s:HL("vimNotation",              s:bluegreen,   s:none)
 call s:HLink("vimUserFunc",           "Function")
 
 " Git
-call s:HL("gitcommitComment",         s:grey2,       s:none, {'gui': 'NONE,italic'})
+call s:HL("gitcommitComment",         s:grey2,       s:none,  {'gui': 'NONE,italic'})
 
 " Markdown
 call s:HL("markdownHeadingDelimiter", s:orange,      s:none)
 call s:HL("markdownURL",              s:purple,      s:none)
 
 " JavaScript
-call s:HLink("javascriptBraces", "Delimiter")
+call s:HLink("javascriptBraces",      "Delimiter")
 
 " Syntastic
-call s:HL("SyntasticErrorSign", s:red, s:none)
-call s:HL("SyntasticWarningSign", s:orange, s:none)
+call s:HL("SyntasticErrorSign",       s:red,         s:none)
+call s:HL("SyntasticWarningSign",     s:orange,      s:none)
 
 " Terminal italic
 $append
