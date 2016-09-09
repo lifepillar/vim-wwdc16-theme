@@ -171,6 +171,9 @@ call s:HL("markdownURL",              s:purple,      s:none)
 " JavaScript
 call s:HLink("javascriptBraces", "Delimiter")
 
+" Syntastic
+call s:HL("SyntasticErrorSign", s:red, s:none)
+call s:HL("SyntasticWarningSign", s:orange, s:none)
 
 " Terminal italic
 $append

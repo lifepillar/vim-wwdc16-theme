@@ -115,6 +115,8 @@ hi gitcommitComment ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE g
 hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 hi markdownURL ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
 hi! link javascriptBraces Delimiter
+hi SyntasticErrorSign ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
+hi SyntasticWarningSign ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 if get(g:, "wwdc16_term_italics", 0)
   hi Comment cterm=italic
   hi gitcommitComment cterm=italic
