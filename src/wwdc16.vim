@@ -60,6 +60,7 @@ endif
 call s:HL("ColorColumn",              s:none,        s:grey1)
 call s:HL("Conceal",                  s:forestgreen, s:none)
 call s:HL("Cursor",                   s:none,        s:white)
+call s:HLink("lCursor", "Cursor")
 call s:HL("CursorIM",                 s:none,        s:white)
 call s:HL("CursorColumn",             s:none,        s:grey1)
 call s:HL("CursorLine",               s:none,        s:grey1)
