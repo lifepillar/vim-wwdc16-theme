@@ -2,12 +2,12 @@
 " Author:   Lifepillar <lifepillar@lifepillar.me>
 " License: This file is placed in the public domain
 
+set background=dark
 hi clear
 if exists('syntax_on')
   syntax reset
 endif
 let colors_name = 'wwdc16'
-set background=dark
 
 if !has('gui_running') && get(g:, "wwdc16_term_trans_bg", 0)
   hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE
