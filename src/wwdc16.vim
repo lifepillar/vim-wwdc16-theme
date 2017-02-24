@@ -16,8 +16,24 @@ let s:green       = ["#52bd58", 10]
 let s:mintgreen   = ["#95c76f", 11]
 let s:purple      = ["#8485ce", 13]
 let s:white       = ["#ffffff", 15]
-
 let s:none         = ["NONE", "NONE"]
+
+let s:palette = [
+      \ s:black,
+      \ s:red,
+      \ s:forestgreen,
+      \ s:orange,
+      \ s:blue,
+      \ s:fusia,
+      \ s:bluegreen,
+      \ s:grey3,
+      \ s:grey1,
+      \ s:grey2,
+      \ s:green,
+      \ s:mintgreen,
+      \ s:purple,
+      \ s:white
+      \ ]
 
 fun! s:HL(group, fg, bg, ...) " ... is an optional dictionary of attributes
   call append(line('$'), join([
@@ -155,6 +171,14 @@ call s:HL("ReplaceMode",              s:orange,      s:black, {'cterm': 'NONE,re
 call s:HL("VisualMode",               s:blue,        s:white, {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:HL("CommandMode",              s:fusia,       s:white, {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 
+" NeoVim
+call append(line("$"), "if has('nvim')")
+call append(line("$"), "hi! link TermCursor Cursor")
+call s:HL("TermCursorNC", s:none, s:grey3)
+for cc in s:palette
+  call append(line("$"), "let g:terminal_color_".cc[1]."='".cc[0]."'")
+endfor
+call append(line("$"), "endif")
 " Vim
 call s:HL("vimMapModKey",             s:orange,      s:none)
 call s:HL("vimMapMod",                s:orange,      s:none)
