@@ -75,7 +75,7 @@ endif
 
 call s:HL("ColorColumn",              s:none,        s:grey1)
 call s:HL("Conceal",                  s:forestgreen, s:none)
-call s:HL("Cursor",                   s:none,        s:white)
+call s:HL("Cursor",                   s:white,        s:blue)
 call s:HLink("lCursor", "Cursor")
 call s:HL("CursorIM",                 s:none,        s:white)
 call s:HL("CursorColumn",             s:none,        s:grey1)
@@ -174,7 +174,7 @@ call s:HL("CommandMode",              s:fusia,       s:white, {'cterm': 'NONE,re
 " NeoVim
 call append(line("$"), "if has('nvim')")
 call append(line("$"), "hi! link TermCursor Cursor")
-call s:HL("TermCursorNC", s:none, s:grey3)
+call s:HL("TermCursorNC", s:white, s:grey3)
 for cc in s:palette
   call append(line("$"), "let g:terminal_color_".cc[1]."='".cc[0]."'")
 endfor

@@ -17,7 +17,7 @@ endif
 
 hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
-hi Cursor ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE guisp=NONE
+hi Cursor ctermfg=15 ctermbg=4 cterm=NONE guifg=#ffffff guibg=#4670d8 gui=NONE guisp=NONE
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE guisp=NONE
 hi CursorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
@@ -109,7 +109,7 @@ hi VisualMode ctermfg=4 ctermbg=15 cterm=NONE,reverse guifg=#4670d8 guibg=#fffff
 hi CommandMode ctermfg=5 ctermbg=15 cterm=NONE,reverse guifg=#b73999 guibg=#ffffff gui=NONE,reverse guisp=NONE
 if has('nvim')
 hi! link TermCursor Cursor
-hi TermCursorNC ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#999999 gui=NONE guisp=NONE
+hi TermCursorNC ctermfg=15 ctermbg=7 cterm=NONE guifg=#ffffff guibg=#999999 gui=NONE guisp=NONE
 let g:terminal_color_0='#292c36'
 let g:terminal_color_1='#dc3c3c'
 let g:terminal_color_2='#64878f'
