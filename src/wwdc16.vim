@@ -40,7 +40,7 @@ let s:palette = [
       \ ]
 
 fun! s:HL(group, fg, bg, ...) " ... is an optional dictionary of attributes
-  call append(line('$'), join([
+  call append(line('$'), repeat(' ', a:0 > 0 ? get(a:1, 'indent', 0) : 0) . join([
         \ 'hi', a:group,
         \ 'ctermfg=' . a:fg[1],
         \ 'ctermbg=' . a:bg[1],
@@ -177,10 +177,10 @@ call s:HL("CommandMode",              s:fusia,       s:white, {'cterm': 'NONE,re
 
 " NeoVim
 call append(line("$"), "if has('nvim')")
-call append(line("$"), "hi! link TermCursor Cursor")
-call s:HL("TermCursorNC", s:white, s:grey3)
+call append(line("$"), "  hi! link TermCursor Cursor")
+call s:HL("TermCursorNC", s:white, s:grey3, { 'indent': 2 })
 for cc in s:palette
-  call append(line("$"), "let g:terminal_color_".cc[1]."='".cc[0]."'")
+  call append(line("$"), "  let g:terminal_color_".cc[1]."='".cc[0]."'")
 endfor
 call append(line("$"), "endif")
 " Vim
