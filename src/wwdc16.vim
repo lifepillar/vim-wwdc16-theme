@@ -1,6 +1,6 @@
-" Name: WWDC16 colorscheme source file
+" Name:     WWDC16 colorscheme source file
 " Author:   Lifepillar <lifepillar@lifepillar.me>
-" License: This file is placed in the public domain
+" License:  This file is placed in the public domain
 
 let s:black       = ["#292c36", 0]
 let s:red         = ["#dc3c3c", 1]
@@ -58,9 +58,9 @@ endf
 
 silent tabnew +setlocal\ ft=vim
 insert
-" Name: WWDC16 colorscheme
+" Name:     WWDC16 colorscheme
 " Author:   Lifepillar <lifepillar@lifepillar.me>
-" License: This file is placed in the public domain
+" License:  This file is placed in the public domain
 
 set background=dark
 hi clear

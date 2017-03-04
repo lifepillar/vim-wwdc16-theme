@@ -1,6 +1,6 @@
-" Name: WWDC16 colorscheme
+" Name:     WWDC16 colorscheme
 " Author:   Lifepillar <lifepillar@lifepillar.me>
-" License: This file is placed in the public domain
+" License:  This file is placed in the public domain
 
 set background=dark
 hi clear
