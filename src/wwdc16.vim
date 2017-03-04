@@ -52,8 +52,8 @@ fun! s:HL(group, fg, bg, ...) " ... is an optional dictionary of attributes
         \ ]))
 endf
 
-fun! s:HLink(src, tgt)
-  call append(line('$'),  'hi! link '.a:src.' '.a:tgt)
+fun! s:HLink(src, tgt, ...)
+  call append(line('$'), repeat(' ', a:0 > 0 ? get(a:1, 'indent', 0) : 0) . 'hi! link '.a:src.' '.a:tgt)
 endf
 
 silent tabnew +setlocal\ ft=vim
@@ -177,7 +177,7 @@ call s:HL("CommandMode",              s:fusia,       s:white, {'cterm': 'NONE,re
 
 " NeoVim
 call append(line("$"), "if has('nvim')")
-call append(line("$"), "  hi! link TermCursor Cursor")
+call s:HLink("TermCursor", "Cursor", { 'indent': 2})
 call s:HL("TermCursorNC", s:white, s:grey3, { 'indent': 2 })
 for cc in s:palette
   call append(line("$"), "  let g:terminal_color_".cc[1]."='".cc[0]."'")
