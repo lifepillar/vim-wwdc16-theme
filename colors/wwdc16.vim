@@ -122,7 +122,9 @@ let g:terminal_color_8='#333333'
 let g:terminal_color_9='#666666'
 let g:terminal_color_10='#52bd58'
 let g:terminal_color_11='#95c76f'
+let g:terminal_color_12='#4670d8'
 let g:terminal_color_13='#8485ce'
+let g:terminal_color_14='#00aba5'
 let g:terminal_color_15='#ffffff'
 endif
 hi vimMapModKey ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE

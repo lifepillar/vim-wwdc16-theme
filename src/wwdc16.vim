@@ -14,7 +14,9 @@ let s:grey1       = ["#333333", 8]
 let s:grey2       = ["#666666", 9]
 let s:green       = ["#52bd58", 10]
 let s:mintgreen   = ["#95c76f", 11]
+let s:blue2       = ["#4670d8", 12]  " For completeness
 let s:purple      = ["#8485ce", 13]
+let s:bluegreen2  = ["#00aba5", 14]  " For completeness
 let s:white       = ["#ffffff", 15]
 let s:none         = ["NONE", "NONE"]
 
@@ -31,7 +33,9 @@ let s:palette = [
       \ s:grey2,
       \ s:green,
       \ s:mintgreen,
+      \ s:blue2,
       \ s:purple,
+      \ s:bluegreen2,
       \ s:white
       \ ]
 
