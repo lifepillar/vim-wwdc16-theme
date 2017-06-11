@@ -36,6 +36,8 @@ Put the following options in your `vimrc` to customize the color scheme.
 
         let g:wwdc16_term_trans_bg = 1
 
+The color palette is available through `g:wwdc16_palette`.
+
 
 ## Hacking
 
