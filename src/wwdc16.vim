@@ -83,6 +83,13 @@ call s:put("else")
 call s:put("  hi Normal ctermfg=".s:fg[1]." ctermbg=".s:bg[1]." cterm=NONE guifg=".s:fg[0]." guibg=".s:bg[0]." gui=NONE")
 call s:put("endif")
 
+call s:put("let g:wwdc16_palette = [")
+for col in s:palette
+  call s:put("  \\ ['" . col[0] . "', '" . col[1] . "'],")
+endfor
+call s:put("  \\ ]")
+call s:put("")
+
 call s:hl("ColorColumn",              s:none,        s:grey1)
 call s:hl("Conceal",                  s:forestgreen, s:none)
 call s:hl("Cursor",                   s:fg,          s:blue)

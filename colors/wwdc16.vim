@@ -9,11 +9,29 @@ if exists('syntax_on')
 endif
 let colors_name = 'wwdc16'
 
-if !has('gui_running') && get(g:, "wwdc16_term_trans_bg", 0)
+if !has('gui_running') && get(g:, 'wwdc16_term_trans_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE
 else
   hi Normal ctermfg=15 ctermbg=0 cterm=NONE guifg=#ffffff guibg=#292c36 gui=NONE
 endif
+let g:wwdc16_palette = [
+  \ ['#292c36', '0'],
+  \ ['#dc3c3c', '1'],
+  \ ['#64878f', '2'],
+  \ ['#d28e5d', '3'],
+  \ ['#4670d8', '4'],
+  \ ['#b73999', '5'],
+  \ ['#00aba5', '6'],
+  \ ['#999999', '7'],
+  \ ['#333333', '8'],
+  \ ['#666666', '9'],
+  \ ['#52bd58', '10'],
+  \ ['#95c76f', '11'],
+  \ ['#4670d8', '12'],
+  \ ['#8485ce', '13'],
+  \ ['#00aba5', '14'],
+  \ ['#ffffff', '15'],
+  \ ]
 
 hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
