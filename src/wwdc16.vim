@@ -196,6 +196,7 @@ call s:HL("gitcommitComment",         s:grey2,       s:none,  {'gui': 'NONE,ital
 " Markdown
 call s:HL("markdownHeadingDelimiter", s:orange,      s:none)
 call s:HL("markdownURL",              s:purple,      s:none)
+call s:HL("htmlItalic",               s:white,       s:none,  {'gui': 'NONE,italic'})
 
 " JavaScript
 call s:HLink("javascriptBraces",      "Delimiter")
@@ -209,6 +210,7 @@ $append
 if get(g:, "wwdc16_term_italics", 0)
   hi Comment cterm=italic
   hi Folded cterm=italic
+  hi htmlItalic cterm=italic
   hi gitcommitComment cterm=italic
 endif
 .
