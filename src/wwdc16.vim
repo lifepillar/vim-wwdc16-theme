@@ -94,7 +94,7 @@ call s:HL("EndOfBuffer",              s:grey2,       s:none)
 call s:HL("Error",                    s:red,         s:white, {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:HL("ErrorMsg",                 s:red,         s:white, {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:HL("FoldColumn",               s:grey2,       s:none)
-call s:HL("Folded",                   s:grey2,       s:none)
+call s:HL("Folded",                   s:grey2,       s:none, {'gui': 'NONE,italic'})
 call s:HL("IncSearch",                s:orange,      s:white, {'cterm': 'NONE,reverse',      'gui': 'NONE,standout'})
 call s:HL("LineNr",                   s:grey2,       s:none)
 call s:HL("MatchParen",               s:grey1,       s:orange, {'cterm': 'NONE,bold,reverse', 'gui': 'NONE,bold,reverse'})
@@ -208,6 +208,7 @@ call s:HL("SyntasticWarningSign",     s:orange,      s:none)
 $append
 if get(g:, "wwdc16_term_italics", 0)
   hi Comment cterm=italic
+  hi Folded cterm=italic
   hi gitcommitComment cterm=italic
 endif
 .

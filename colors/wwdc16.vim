@@ -32,7 +32,7 @@ hi EndOfBuffer ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NO
 hi Error ctermfg=1 ctermbg=15 cterm=NONE,reverse guifg=#dc3c3c guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi ErrorMsg ctermfg=1 ctermbg=15 cterm=NONE,reverse guifg=#dc3c3c guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi FoldColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
-hi Folded ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
+hi Folded ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE,italic guisp=NONE
 hi IncSearch ctermfg=3 ctermbg=15 cterm=NONE,reverse guifg=#d28e5d guibg=#ffffff gui=NONE,standout guisp=NONE
 hi LineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
 hi MatchParen ctermfg=8 ctermbg=3 cterm=NONE,bold,reverse guifg=#333333 guibg=#d28e5d gui=NONE,bold,reverse guisp=NONE
@@ -140,5 +140,6 @@ hi SyntasticErrorSign ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE
 hi SyntasticWarningSign ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 if get(g:, "wwdc16_term_italics", 0)
   hi Comment cterm=italic
+  hi Folded cterm=italic
   hi gitcommitComment cterm=italic
 endif
