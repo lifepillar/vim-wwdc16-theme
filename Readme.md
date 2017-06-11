@@ -18,8 +18,8 @@ This color scheme works **out of the box** if you use:
 WWDC16 also works in MacVim, gVim, etc…: no configuration is needed.
 
 For terminals not supporting true colors, you *must* set your 16 terminal ASCII
-colors to the WWDC16 palette. For macOS's Terminal.app and iTerm2, terminal
-profile are included in the repo.
+colors to the WWDC16 palette. This repo contains color profiles for For macOS's
+Terminal.app and for iTerm2.
 
 
 ## Options
