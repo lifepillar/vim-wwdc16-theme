@@ -78,9 +78,9 @@ let colors_name = 'wwdc16'
 .
 
 call s:put("if !has('gui_running') && get(g:, 'wwdc16_term_trans_bg', 0)")
-call s:put("  hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE")
+call s:put("  hi Normal ctermfg=".s:fg[1]." ctermbg=NONE cterm=NONE guifg=".s:fg[0]." guibg=NONE gui=NONE")
 call s:put("else")
-call s:put("  hi Normal ctermfg=15 ctermbg=0 cterm=NONE guifg=#ffffff guibg=#292c36 gui=NONE")
+call s:put("  hi Normal ctermfg=".s:fg[1]." ctermbg=".s:bg[1]." cterm=NONE guifg=".s:fg[0]." guibg=".s:bg[0]." gui=NONE")
 call s:put("endif")
 
 call s:hl("ColorColumn",              s:none,        s:grey1)
