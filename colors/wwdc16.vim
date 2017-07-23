@@ -57,7 +57,7 @@ hi SpellRare ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NO
 hi StatusLine ctermfg=2 ctermbg=15 cterm=NONE,reverse guifg=#64878f guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi StatusLineNC ctermfg=2 ctermbg=0 cterm=NONE,reverse guifg=#64878f guibg=#292c36 gui=NONE,reverse guisp=NONE
 hi TabLine ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
-hi TabLineFill ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
+hi TabLineFill ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
 hi TabLineSel ctermfg=15 ctermbg=2 cterm=NONE guifg=#ffffff guibg=#64878f gui=NONE guisp=NONE
 hi Title ctermfg=3 ctermbg=NONE cterm=NONE,bold guifg=#d28e5d guibg=NONE gui=NONE,bold guisp=NONE
 hi VertSplit ctermfg=2 ctermbg=2 cterm=NONE guifg=#64878f guibg=#64878f gui=NONE guisp=NONE

@@ -127,7 +127,7 @@ call s:hl("SpellRare",                s:purple,      s:none,   {'cterm': 'NONE,u
 call s:hl("StatusLine",               s:forestgreen, s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("StatusLineNC",             s:forestgreen, s:bg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("TabLine",                  s:bg,          s:forestgreen)
-call s:hl("TabLineFill",              s:bg,          s:forestgreen)
+call s:hl("TabLineFill",              s:fg,          s:forestgreen)
 call s:hl("TabLineSel",               s:fg,          s:forestgreen)
 call s:hl("Title",                    s:orange,      s:none,   {'cterm': 'NONE,bold',         'gui': 'NONE,bold'})
 call s:hl("VertSplit",                s:forestgreen, s:forestgreen)
