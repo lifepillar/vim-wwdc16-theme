@@ -15,15 +15,15 @@ else
   hi Normal ctermfg=15 ctermbg=0 cterm=NONE guifg=#ffffff guibg=#292c36 gui=NONE
 endif
 
-let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#64878f', '#d28e5d', '#4670d8', '#b73999', '#00aba5', '#999999', '#333333', '#666666', '#52bd58', '#95c76f', '#4670d8', '#8485ce', '#00aba5', '#ffffff']
+let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#64878f', '#d28e5d', '#4670d8', '#b73999', '#00aba5', '#999999', '#333344', '#666666', '#52bd58', '#95c76f', '#4670d8', '#8485ce', '#00aba5', '#ffffff']
 
-hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
+hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333344 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#64878f guibg=NONE gui=NONE guisp=NONE
 hi Cursor ctermfg=15 ctermbg=4 cterm=NONE guifg=#ffffff guibg=#4670d8 gui=NONE guisp=NONE
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE guisp=NONE
-hi CursorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
-hi CursorLine ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333333 gui=NONE guisp=NONE
+hi CursorColumn ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333344 gui=NONE guisp=NONE
+hi CursorLine ctermfg=NONE ctermbg=8 cterm=NONE guifg=NONE guibg=#333344 gui=NONE guisp=NONE
 hi CursorLineNr ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
 hi DiffAdd ctermfg=11 ctermbg=0 cterm=NONE,reverse guifg=#95c76f guibg=#292c36 gui=NONE,reverse guisp=NONE
 hi DiffChange ctermfg=3 ctermbg=15 cterm=NONE,reverse guifg=#d28e5d guibg=#ffffff gui=NONE,reverse guisp=NONE
@@ -37,12 +37,12 @@ hi FoldColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NON
 hi Folded ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE,italic guisp=NONE
 hi IncSearch ctermfg=3 ctermbg=15 cterm=NONE,reverse guifg=#d28e5d guibg=#ffffff gui=NONE,standout guisp=NONE
 hi LineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
-hi MatchParen ctermfg=8 ctermbg=3 cterm=NONE,bold,reverse guifg=#333333 guibg=#d28e5d gui=NONE,bold,reverse guisp=NONE
+hi MatchParen ctermfg=8 ctermbg=3 cterm=NONE,bold,reverse guifg=#333344 guibg=#d28e5d gui=NONE,bold,reverse guisp=NONE
 hi ModeMsg ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
 hi MoreMsg ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
 hi NonText ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
 hi Pmenu ctermfg=0 ctermbg=2 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
-hi PmenuSbar ctermfg=9 ctermbg=8 cterm=NONE guifg=#666666 guibg=#333333 gui=NONE guisp=NONE
+hi PmenuSbar ctermfg=9 ctermbg=8 cterm=NONE guifg=#666666 guibg=#333344 gui=NONE guisp=NONE
 hi PmenuSel ctermfg=15 ctermbg=3 cterm=NONE guifg=#ffffff guibg=#d28e5d gui=NONE guisp=NONE
 hi PmenuThumb ctermfg=9 ctermbg=3 cterm=NONE guifg=#666666 guibg=#d28e5d gui=NONE guisp=NONE
 hi Question ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
@@ -99,7 +99,7 @@ hi WWDC16Blue ctermfg=4 ctermbg=NONE cterm=NONE guifg=#4670d8 guibg=NONE gui=NON
 hi WWDC16Fusia ctermfg=5 ctermbg=NONE cterm=NONE guifg=#b73999 guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Bluegreen ctermfg=6 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Grey3 ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
-hi WWDC16Grey1 ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333333 guibg=NONE gui=NONE guisp=NONE
+hi WWDC16Grey1 ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Grey2 ctermfg=9 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Green ctermfg=10 ctermbg=NONE cterm=NONE guifg=#52bd58 guibg=NONE gui=NONE guisp=NONE
 hi WWDC16Mintgreen ctermfg=11 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NONE guisp=NONE
@@ -121,7 +121,7 @@ if has('nvim')
   let g:terminal_color_5='#b73999'
   let g:terminal_color_6='#00aba5'
   let g:terminal_color_7='#999999'
-  let g:terminal_color_8='#333333'
+  let g:terminal_color_8='#333344'
   let g:terminal_color_9='#666666'
   let g:terminal_color_10='#52bd58'
   let g:terminal_color_11='#95c76f'
