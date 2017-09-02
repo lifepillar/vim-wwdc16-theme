@@ -180,7 +180,7 @@ call s:hl("Type",                     s:brightmagenta, s:none)
 call s:hl("Underlined",               s:none,          s:none,   {'cterm': 'NONE,underline',    'gui': 'NONE,underline'})
 
 " Custom highlight groups for the main modes
-call s:hl("NormalMode",               s:brightblack,   s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
+call s:hl("NormalMode",               s:cyan,          s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("InsertMode",               s:brightgreen,   s:bg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("ReplaceMode",              s:yellow,        s:bg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("VisualMode",               s:blue,          s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})

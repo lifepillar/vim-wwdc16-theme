@@ -94,7 +94,7 @@ hi Structure ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE
 hi Todo ctermfg=5 ctermbg=NONE cterm=NONE,bold guifg=#b73999 guibg=NONE gui=NONE,bold guisp=NONE
 hi Type ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=NONE,underline guifg=NONE guibg=NONE gui=NONE,underline guisp=NONE
-hi NormalMode ctermfg=8 ctermbg=15 cterm=NONE,reverse guifg=#333344 guibg=#ffffff gui=NONE,reverse guisp=NONE
+hi NormalMode ctermfg=6 ctermbg=15 cterm=NONE,reverse guifg=#64878f guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi InsertMode ctermfg=10 ctermbg=0 cterm=NONE,reverse guifg=#95c76f guibg=#292c36 gui=NONE,reverse guisp=NONE
 hi ReplaceMode ctermfg=3 ctermbg=0 cterm=NONE,reverse guifg=#d28e5d guibg=#292c36 gui=NONE,reverse guisp=NONE
 hi VisualMode ctermfg=4 ctermbg=15 cterm=NONE,reverse guifg=#4670d8 guibg=#ffffff gui=NONE,reverse guisp=NONE
