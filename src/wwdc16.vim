@@ -222,7 +222,7 @@ call s:hl("SyntasticWarningSign",     s:yellow,        s:none)
 
 " Terminal italic
 $append
-if get(g:, "wwdc16_term_italics", 0)
+if get(g:, "wwdc16_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic

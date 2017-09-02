@@ -28,11 +28,12 @@ colors).
 
 Put the following options in your `vimrc` to customize the color scheme.
 
-- **Enable italics in the terminal:**
+- **Disable italics in the terminal:**
 
-        let g:wwdc16_term_italics = 1
+        let g:wwdc16_term_italics = 0
 
-  Your terminal must support italics for this option to take effect.
+  Italics is used by default, but it requires support from the terminal and the
+  font.
 
 - **Use a transparent background in the terminal:**
 

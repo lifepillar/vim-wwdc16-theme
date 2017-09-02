@@ -134,7 +134,7 @@ hi htmlBoldItalic ctermfg=15 ctermbg=NONE cterm=NONE,bold guifg=#ffffff guibg=NO
 hi! link javascriptBraces Delimiter
 hi SyntasticErrorSign ctermfg=1 ctermbg=NONE cterm=NONE guifg=#dc3c3c guibg=NONE gui=NONE guisp=NONE
 hi SyntasticWarningSign ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
-if get(g:, "wwdc16_term_italics", 0)
+if get(g:, "wwdc16_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
