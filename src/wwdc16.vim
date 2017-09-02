@@ -37,7 +37,7 @@ let s:fusia       = ["#b73999", 5]
 let s:bluegreen   = ["#00aba5", 6]
 let s:grey3       = ["#999999", 7]
 let s:grey1       = ["#333344", 8]
-let s:grey2       = ["#666666", 9]
+let s:brightred       = ["#666666", 9]
 let s:green       = ["#52bd58", 10]
 let s:mintgreen   = ["#95c76f", 11]
 let s:blue2       = ["#4670d8", 12]  " For completeness
@@ -58,7 +58,7 @@ let s:palette = [
       \ s:bluegreen,
       \ s:grey3,
       \ s:grey1,
-      \ s:grey2,
+      \ s:brightred,
       \ s:green,
       \ s:mintgreen,
       \ s:blue2,
@@ -105,26 +105,26 @@ call s:hl("DiffChange",               s:orange,      s:fg,     {'cterm': 'NONE,r
 call s:hl("DiffDelete",               s:red,         s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("DiffText",                 s:green,       s:fg,     {'cterm': 'NONE,bold,reverse', 'gui': 'NONE,bold,reverse'})
 call s:hl("Directory",                s:mintgreen,   s:none)
-call s:hl("EndOfBuffer",              s:grey2,       s:none)
+call s:hl("EndOfBuffer",              s:grey1,       s:none)
 call s:hl("Error",                    s:red,         s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("ErrorMsg",                 s:red,         s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
-call s:hl("FoldColumn",               s:grey2,       s:none)
-call s:hl("Folded",                   s:grey2,       s:none,   {'gui':   'NONE,italic'})
+call s:hl("FoldColumn",               s:grey1,       s:none)
+call s:hl("Folded",                   s:grey1,       s:none,   {'gui':   'NONE,italic'})
 call s:hl("IncSearch",                s:orange,      s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,standout'})
-call s:hl("LineNr",                   s:grey2,       s:none)
+call s:hl("LineNr",                   s:grey1,       s:none)
 call s:hl("MatchParen",               s:grey1,       s:orange, {'cterm': 'NONE,bold,reverse', 'gui': 'NONE,bold,reverse'})
 call s:hl("ModeMsg",                  s:fg,          s:none)
-call s:hl("MoreMsg",                  s:grey2,       s:none)
+call s:hl("MoreMsg",                  s:grey1,       s:none)
 call s:hl("NonText",                  s:fg,          s:none)
 call s:hl("Pmenu",                    s:bg,          s:forestgreen)
-call s:hl("PmenuSbar",                s:grey2,       s:grey1)
+call s:hl("PmenuSbar",                s:grey1,       s:grey1)
 call s:hl("PmenuSel",                 s:fg,          s:orange)
-call s:hl("PmenuThumb",               s:grey2,       s:orange)
+call s:hl("PmenuThumb",               s:grey1,       s:orange)
 call s:hl("Question",                 s:grey3,       s:none)
 call s:hlink("QuickFixLine", "Search")
 call s:hl("Search",                   s:orange,      s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
-call s:hl("SignColumn",               s:grey2,       s:none)
-call s:hl("SpecialKey",               s:grey2,       s:none)
+call s:hl("SignColumn",               s:grey1,       s:none)
+call s:hl("SpecialKey",               s:grey1,       s:none)
 call s:hl("SpellBad",                 s:purple,      s:none,   {'cterm': 'NONE,underline',    'gui': 'NONE,undercurl', 'guisp': s:fusia[0]})
 call s:hl("SpellCap",                 s:purple,      s:none,   {'cterm': 'NONE,underline',    'gui': 'NONE,undercurl', 'guisp': s:fusia[0]})
 call s:hl("SpellLocal",               s:purple,      s:none,   {'cterm': 'NONE,underline',    'gui': 'NONE,undercurl', 'guisp': s:fusia[0]})
@@ -180,14 +180,14 @@ call s:hl("WWDC16Fusia",              s:fusia,       s:none)
 call s:hl("WWDC16Bluegreen",          s:bluegreen,   s:none)
 call s:hl("WWDC16Grey3",              s:grey3,       s:none)
 call s:hl("WWDC16Grey1",              s:grey1,       s:none)
-call s:hl("WWDC16Grey2",              s:grey2,       s:none)
+call s:hl("WWDC16BrightRed",              s:grey1,       s:none)
 call s:hl("WWDC16Green",              s:green,       s:none)
 call s:hl("WWDC16Mintgreen",          s:mintgreen,   s:none)
 call s:hl("WWDC16Purple",             s:purple,      s:none)
 call s:hl("WWDC16White",              s:fg,          s:none)
 
 " Custom highlight groups for the main modes
-call s:hl("NormalMode",               s:grey2,       s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
+call s:hl("NormalMode",               s:grey1,       s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("InsertMode",               s:mintgreen,   s:bg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("ReplaceMode",              s:orange,      s:bg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
 call s:hl("VisualMode",               s:blue,        s:fg,     {'cterm': 'NONE,reverse',      'gui': 'NONE,reverse'})
@@ -211,7 +211,7 @@ call s:hl("vimNotation",              s:bluegreen,   s:none)
 call s:hlink("vimUserFunc",           "Function")
 
 " Git
-call s:hl("gitcommitComment",         s:grey2,       s:none,   {'gui':   'NONE,italic'})
+call s:hl("gitcommitComment",         s:grey1,       s:none,   {'gui':   'NONE,italic'})
 
 " Markdown
 call s:hl("markdownHeadingDelimiter", s:orange,      s:none)
