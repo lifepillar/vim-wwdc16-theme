@@ -9,7 +9,7 @@ if exists('syntax_on')
 endif
 let colors_name = 'wwdc16'
 
-let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b73999', '#64878f', '#999999', '#333344', '#dc3c3c', '#95c76f', '#d28e5d', '#4670d8', '#8485ce', '#00aba5', '#ffffff']
+let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b73999', '#64878f', '#999999', '#333344', '#f84547', '#95c76f', '#efa16b', '#5283ff', '#8485ce', '#00aba5', '#ffffff']
 
 if !has('gui_running') && get(g:, 'wwdc16_term_trans_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
@@ -111,10 +111,10 @@ if has('nvim')
   let g:terminal_color_6='#64878f'
   let g:terminal_color_7='#999999'
   let g:terminal_color_8='#333344'
-  let g:terminal_color_9='#dc3c3c'
+  let g:terminal_color_9='#f84547'
   let g:terminal_color_10='#95c76f'
-  let g:terminal_color_11='#d28e5d'
-  let g:terminal_color_12='#4670d8'
+  let g:terminal_color_11='#efa16b'
+  let g:terminal_color_12='#5283ff'
   let g:terminal_color_13='#8485ce'
   let g:terminal_color_14='#00aba5'
   let g:terminal_color_15='#ffffff'
