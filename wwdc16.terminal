@@ -489,7 +489,7 @@
 	<key>UseBoldFonts</key>
 	<true/>
 	<key>UseBrightBold</key>
-	<true/>
+	<false/>
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
