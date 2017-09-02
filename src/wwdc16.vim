@@ -238,22 +238,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Demo :)
 
-" WWDC16 color palette
-call s:hl("WWDC16Black",              s:bg,          s:none)
-call s:hl("WWDC16Red",                s:red,         s:none)
-call s:hl("WWDC16Forestgreen",        s:cyan, s:none)
-call s:hl("WWDC16Orange",             s:yellow,      s:none)
-call s:hl("WWDC16Blue",               s:blue,        s:none)
-call s:hl("WWDC16Fusia",              s:magenta,       s:none)
-call s:hl("WWDC16Bluegreen",          s:brightcyan,   s:none)
-call s:hl("WWDC16Grey3",              s:white,       s:none)
-call s:hl("WWDC16Grey1",              s:brightblack,       s:none)
-call s:hl("WWDC16BrightRed",              s:brightblack,       s:none)
-call s:hl("WWDC16Green",              s:green,       s:none)
-call s:hl("WWDC16Mintgreen",          s:brightgreen,   s:none)
-call s:hl("WWDC16Purple",             s:brightmagenta,      s:none)
-call s:hl("WWDC16White",              s:fg,          s:none)
-
 silent tabnew
 syn match   WWDC16S1 /"Hello, Vim!"\|packages\|available/
 syn match   WWDC16S2 /"November 2, 1991"\|learnAbout\|jobs/
@@ -262,13 +246,13 @@ syn keyword WWDC16S4 print
 syn keyword WWDC16S5 channels gameChanging 1000
 syn keyword WWDC16S6 timers handsOn everywhere
 syn keyword WWDC16S7 100
-hi! link WWDC16S1 WWDC16Red
-hi! link WWDC16S2 WWDC16Mintgreen
-hi! link WWDC16S3 WWDC16Fusia
-hi! link WWDC16S4 WWDC16Bluegreen
-hi! link WWDC16S5 WWDC16Forestgreen
-hi! link WWDC16S6 WWDC16Orange
-hi! link WWDC16S7 WWDC16Purple
+execute s:hlstring("WWDC16S1", s:red,           s:none)
+execute s:hlstring("WWDC16S2", s:brightgreen,   s:none)
+execute s:hlstring("WWDC16S3", s:magenta,       s:none)
+execute s:hlstring("WWDC16S4", s:brightcyan,    s:none)
+execute s:hlstring("WWDC16S5", s:cyan,          s:none)
+execute s:hlstring("WWDC16S6", s:yellow,        s:none)
+execute s:hlstring("WWDC16S7", s:brightmagenta, s:none)
 
 insert
 print("Hello, Vim!")
