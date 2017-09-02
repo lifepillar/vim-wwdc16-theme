@@ -2,6 +2,14 @@
 " Author:   Lifepillar <lifepillar@lifepillar.me>
 " License:  This file is placed in the public domain
 
+fun! s:hex2rgb(col)
+  return map(matchlist(a:col, '^#\?\(..\)\(..\)\(..\)$')[1:3], 'str2nr(v:val,16)')
+endf
+
+fun! s:rgb2hex(r,g,b)
+  return '#' . printf('%02x', a:r) . printf('%02x', a:g) . printf('%02x', a:b)
+endf
+
 fun! s:put(line)
   call append(line('$'), a:line)
 endf
@@ -28,22 +36,22 @@ fun! s:hlink(src, tgt, ...)
   call append(line('$'), repeat(' ', a:0 > 0 ? get(a:1, 'indent', 0) : 0) . 'hi! link '.a:src.' '.a:tgt)
 endf
 
-let s:black       = ["#292c36", 0]
-let s:red         = ["#dc3c3c", 1]
-let s:forestgreen = ["#64878f", 2]
-let s:orange      = ["#d28e5d", 3]
-let s:blue        = ["#4670d8", 4]
-let s:fusia       = ["#b73999", 5]
-let s:bluegreen   = ["#00aba5", 6]
-let s:grey3       = ["#999999", 7]
-let s:grey1       = ["#333344", 8]
+let s:black       = [s:rgb2hex(41,  44,  54),  0]
+let s:red         = [s:rgb2hex(220, 60,  60),  1]
+let s:forestgreen = [s:rgb2hex(100, 135, 143), 2]
+let s:orange      = [s:rgb2hex(210, 142, 93),  3]
+let s:blue        = [s:rgb2hex(70,  112, 216), 4]
+let s:fusia       = [s:rgb2hex(183, 57,  153), 5]
+let s:bluegreen   = [s:rgb2hex(0,   171, 165), 6]
+let s:grey3       = [s:rgb2hex(153, 153, 153), 7]
+let s:grey1       = [s:rgb2hex(51,  51,  68),  8]
 let s:brightred       = ["#666666", 9]
-let s:green       = ["#52bd58", 10]
-let s:mintgreen   = ["#95c76f", 11]
-let s:blue2       = ["#4670d8", 12]  " For completeness
-let s:purple      = ["#8485ce", 13]
-let s:bluegreen2  = ["#00aba5", 14]  " For completeness
-let s:white       = ["#ffffff", 15]
+let s:green       = [s:rgb2hex(82,  189, 88), 10]
+let s:mintgreen   = [s:rgb2hex(149, 199, 111), 11]
+let s:blue2       = [s:rgb2hex(70,  112, 216), 12]
+let s:purple      = [s:rgb2hex(132, 133, 206), 13]
+let s:bluegreen2  = [s:rgb2hex(0,   171, 165), 14]
+let s:white       = [s:rgb2hex(255, 255, 255), 15]
 let s:none        = ["NONE", "NONE"]
 let s:fg          = s:white
 let s:bg          = s:black
