@@ -6,8 +6,8 @@ fun! s:put(line)
   call append(line('$'), a:line)
 endf
 
-fun! s:hl(group, fg, bg, ...) " ... is an optional dictionary of attributes
-  call append(line('$'), repeat(' ', a:0 > 0 ? get(a:1, 'indent', 0) : 0) . join([
+fun! s:hlstring(group, fg, bg, ...) " ... is an optional dictionary of attributes
+  return join([
         \ 'hi', a:group,
         \ 'ctermfg=' . a:fg[1],
         \ 'ctermbg=' . a:bg[1],
@@ -16,7 +16,12 @@ fun! s:hl(group, fg, bg, ...) " ... is an optional dictionary of attributes
         \ 'guibg='   . a:bg[0],
         \ 'gui='     . (a:0 > 0 ? get(a:1, 'gui', 'NONE') : 'NONE'),
         \ 'guisp='   . (a:0 > 0 ? get(a:1, 'guisp', 'NONE') : 'NONE')
-        \ ]))
+        \ ])
+endf
+
+fun! s:hl(group, fg, bg, ...) " ... is an optional dictionary of attributes
+  call append(line('$'), repeat(' ', a:0 > 0 ? get(a:1, 'indent', 0) : 0)
+        \ . s:hlstring(a:group, a:fg, a:bg, get(a:000, 0, {})))
 endf
 
 fun! s:hlink(src, tgt, ...)
