@@ -34,13 +34,13 @@ hi Directory ctermfg=10 ctermbg=NONE cterm=NONE guifg=#95c76f guibg=NONE gui=NON
 hi EndOfBuffer ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
 hi Error ctermfg=1 ctermbg=15 cterm=NONE,reverse guifg=#dc3c3c guibg=#ffffff gui=NONE,reverse guisp=NONE
 hi ErrorMsg ctermfg=1 ctermbg=15 cterm=NONE,reverse guifg=#dc3c3c guibg=#ffffff gui=NONE,reverse guisp=NONE
-hi FoldColumn ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
-hi Folded ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE,italic guisp=NONE
+hi FoldColumn ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
+hi Folded ctermfg=7 ctermbg=8 cterm=NONE guifg=#999999 guibg=#333344 gui=NONE,italic guisp=NONE
 hi IncSearch ctermfg=3 ctermbg=15 cterm=NONE,reverse guifg=#d28e5d guibg=#ffffff gui=NONE,standout guisp=NONE
-hi LineNr ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
+hi LineNr ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
 hi MatchParen ctermfg=8 ctermbg=3 cterm=NONE,bold,reverse guifg=#333344 guibg=#d28e5d gui=NONE,bold,reverse guisp=NONE
 hi ModeMsg ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
-hi MoreMsg ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
+hi MoreMsg ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
 hi NonText ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE guisp=NONE
 hi Pmenu ctermfg=0 ctermbg=6 cterm=NONE guifg=#292c36 guibg=#64878f gui=NONE guisp=NONE
 hi PmenuSbar ctermfg=8 ctermbg=8 cterm=NONE guifg=#333344 guibg=#333344 gui=NONE guisp=NONE
@@ -49,8 +49,8 @@ hi PmenuThumb ctermfg=8 ctermbg=3 cterm=NONE guifg=#333344 guibg=#d28e5d gui=NON
 hi Question ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
 hi! link QuickFixLine Search
 hi Search ctermfg=3 ctermbg=15 cterm=NONE,reverse guifg=#d28e5d guibg=#ffffff gui=NONE,reverse guisp=NONE
-hi SignColumn ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
-hi SpecialKey ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE guisp=NONE
+hi SignColumn ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
+hi SpecialKey ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE guisp=NONE
 hi SpellBad ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
 hi SpellCap ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
 hi SpellLocal ctermfg=13 ctermbg=NONE cterm=NONE,underline guifg=#8485ce guibg=NONE gui=NONE,undercurl guisp=#b73999
