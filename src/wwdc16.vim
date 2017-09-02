@@ -238,6 +238,9 @@ if get(g:, "wwdc16_term_italics", 0)
 endif
 .
 
+if !get(g:, 'wwdc16_demo', 0)
+  finish
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Demo :)
