@@ -17,7 +17,7 @@ This color scheme works **out of the box** if you use:
 
 WWDC16 also works in MacVim, gVim, etc…: no configuration is needed.
 
-For terminals not supporting true colors, your terminal 16 ANSI colors should
+For terminals not supporting true colors, your terminal's 16 ANSI colors should
 be set to the WWDC16 palette, too (otherwise, WWDC16 will just use whatever
 colors your terminal is currently using). For macOS's Terminal.app and iTerm2,
 terminal profiles are included in the repo (note that iTerm2 *does* support true
