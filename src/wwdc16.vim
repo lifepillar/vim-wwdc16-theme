@@ -204,7 +204,7 @@ call s:hl("vimNotation",              s:brightcyan,    s:none)
 call s:hlink("vimUserFunc",           "Function")
 
 " Git
-call s:hl("gitcommitComment",         s:brightblack,   s:none,   {'gui':   'NONE,italic'})
+call s:hl("gitcommitComment",         s:white,         s:none,   {'gui':   'NONE,italic'})
 
 " Markdown
 call s:hl("markdownHeadingDelimiter", s:yellow,        s:none)

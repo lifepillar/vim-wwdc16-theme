@@ -125,7 +125,7 @@ hi vimMapMod ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE
 hi vimBracket ctermfg=14 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
 hi vimNotation ctermfg=14 ctermbg=NONE cterm=NONE guifg=#00aba5 guibg=NONE gui=NONE guisp=NONE
 hi! link vimUserFunc Function
-hi gitcommitComment ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333344 guibg=NONE gui=NONE,italic guisp=NONE
+hi gitcommitComment ctermfg=7 ctermbg=NONE cterm=NONE guifg=#999999 guibg=NONE gui=NONE,italic guisp=NONE
 hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE cterm=NONE guifg=#d28e5d guibg=NONE gui=NONE guisp=NONE
 hi markdownURL ctermfg=13 ctermbg=NONE cterm=NONE guifg=#8485ce guibg=NONE gui=NONE guisp=NONE
 hi htmlItalic ctermfg=15 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE,italic guisp=NONE
