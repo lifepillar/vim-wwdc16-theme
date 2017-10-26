@@ -14,22 +14,22 @@ License:     This file is placed in the public domain
 
 # Color palette {{{
 # Color name                GUI                  Base256    Base16 (optional)
-Color: black                rgb( 41,  44,  54)      ~        Black
-Color: red                  rgb(220,  60,  60)      ~        DarkRed
-Color: green                rgb( 82, 189,  88)      ~        DarkGreen
-Color: yellow               rgb(210, 142,  93)      ~        DarkYellow
-Color: blue                 rgb( 70, 112, 216)      ~        DarkBlue
-Color: magenta              rgb(183,  57, 153)      ~        DarkMagenta
-Color: cyan                 rgb(100, 135, 143)      ~        DarkCyan
-Color: white                rgb(153, 153, 153)      ~        LightGrey
-Color: brightblack          rgb( 51,  51,  68)      ~        DarkGrey
-Color: brightred            rgb(248,  69,  71)      ~        LightRed
-Color: brightgreen          rgb(149, 199, 111)      ~        LightGreen
-Color: brightyellow         rgb(239, 161, 107)      ~        LightYellow
-Color: brightblue           rgb( 82, 131, 255)      ~        LightBlue
-Color: brightmagenta        rgb(132, 133, 206)      ~        LightMagenta
-Color: brightcyan           rgb(  0, 171, 165)      ~        LightCyan
-Color: brightwhite          rgb(255, 255, 255)      ~        White
+Color: black                rgb( 41,  44,  54)      ~        0
+Color: red                  rgb(220,  60,  60)      ~        1
+Color: green                rgb( 82, 189,  88)      ~        2
+Color: yellow               rgb(210, 142,  93)      ~        3
+Color: blue                 rgb( 70, 112, 216)      ~        4
+Color: magenta              rgb(183,  57, 153)      ~        5
+Color: cyan                 rgb(100, 135, 143)      ~        6
+Color: white                rgb(153, 153, 153)      ~        7
+Color: brightblack          rgb( 51,  51,  68)      ~        8
+Color: brightred            rgb(248,  69,  71)      ~        9
+Color: brightgreen          rgb(149, 199, 111)      ~        10
+Color: brightyellow         rgb(239, 161, 107)      ~        11
+Color: brightblue           rgb( 82, 131, 255)      ~        12
+Color: brightmagenta        rgb(132, 133, 206)      ~        13
+Color: brightcyan           rgb(  0, 171, 165)      ~        14
+Color: brightwhite          rgb(255, 255, 255)      ~        15
 # }}}
 
 Background: dark
