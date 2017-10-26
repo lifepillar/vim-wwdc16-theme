@@ -1,0 +1,213 @@
+# vim: ft=colortemplate fdm=marker
+
+# Information {{{
+# Mandatory
+Full name:   WWDC16
+Short name:  wwdc16
+Author:      Lifepillar <lifepillar@lifepillar.me>
+Maintainer:  Lifepillar <lifepillar@lifepillar.me>
+# Optional
+Website:     https://github.com/lifepillar/vim-wwdc16-theme
+Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
+License:     This file is placed in the public domain
+# }}}
+
+# Color palette {{{
+# Color name                GUI                  Base256    Base16 (optional)
+Color: black                rgb( 41,  44,  54)      ~        Black
+Color: red                  rgb(220,  60,  60)      ~        DarkRed
+Color: green                rgb( 82, 189,  88)      ~        DarkGreen
+Color: yellow               rgb(210, 142,  93)      ~        DarkYellow
+Color: blue                 rgb( 70, 112, 216)      ~        DarkBlue
+Color: magenta              rgb(183,  57, 153)      ~        DarkMagenta
+Color: cyan                 rgb(100, 135, 143)      ~        DarkCyan
+Color: white                rgb(153, 153, 153)      ~        LightGrey
+Color: brightblack          rgb( 51,  51,  68)      ~        DarkGrey
+Color: brightred            rgb(248,  69,  71)      ~        LightRed
+Color: brightgreen          rgb(149, 199, 111)      ~        LightGreen
+Color: brightyellow         rgb(239, 161, 107)      ~        LightYellow
+Color: brightblue           rgb( 82, 131, 255)      ~        LightBlue
+Color: brightmagenta        rgb(132, 133, 206)      ~        LightMagenta
+Color: brightcyan           rgb(  0, 171, 165)      ~        LightCyan
+Color: brightwhite          rgb(255, 255, 255)      ~        White
+# }}}
+
+Background: dark
+
+# Default highlight groups {{{
+# Comment out (do not delete) the definitions that you want to keep at their default.
+# Group              Foreground        Background        Attributes
+Normal               brightwhite       black
+ColorColumn          none              brightblack
+Conceal              cyan              none
+Cursor               fg                blue
+CursorColumn         none              brightblack
+CursorLine           none              brightblack
+CursorLineNr         fg                none
+DiffAdd              brightgreen       bg                reverse
+DiffChange           yellow            fg                reverse
+DiffDelete           red               fg                reverse
+DiffText             green             fg                bold,reverse
+Directory            brightgreen       none
+EndOfBuffer          brightblack       none
+ErrorMsg             red               fg                reverse
+FoldColumn           white             none
+Folded               white             brightblack       g=italic
+IncSearch            yellow            fg                t=reverse g=standout
+LineNr               white             none
+MatchParen           brightblack       yellow            bold,reverse
+ModeMsg              fg                none
+MoreMsg              white             none
+NonText              fg                none
+Pmenu                bg                cyan
+PmenuSbar            brightblack       brightblack
+PmenuSel             fg                yellow
+PmenuThumb           brightblack       yellow
+Question             white             none
+QuickFixLine     ->  Search
+Search               yellow            fg                reverse
+SignColumn           white             none
+SpecialKey           white             none
+SpellBad             brightmagenta     none              s=magenta t=underline g=undercurl
+SpellCap             brightmagenta     none              s=magenta t=underline g=undercurl
+SpellLocal           brightmagenta     none              s=magenta t=underline g=undercurl
+SpellRare            brightmagenta     none              s=magenta t=underline g=undercurl
+StatusLine           cyan              fg                reverse
+StatusLineNC         cyan              bg                reverse
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+TabLine              bg                cyan
+TabLineFill          fg                cyan
+TabLineSel           fg                cyan
+Title                yellow            none              bold
+VertSplit            cyan              cyan
+Visual               blue              fg                reverse
+VisualNOS            fg                blue
+WarningMsg           red               none
+WildMenu             fg                magenta
+# Other conventional group names (see `:help group-name`)
+Boolean              brightgreen       none
+Character            yellow            none
+Comment              white             none              g=italic
+Conditional       -> Statement
+Constant             yellow            none
+Define            -> PreProc
+Debug                magenta           none
+Delimiter            fg                none
+Error                red               fg                reverse
+Exception         -> Statement
+Float                brightgreen       none
+Function             green             none
+Identifier           brightcyan        none
+Ignore               fg                none
+Include              red               none
+Keyword              cyan              none
+Label                green             none
+Macro             -> PreProc
+Number               brightgreen       none
+Operator             brightcyan        none
+PreCondit         -> PreProc
+PreProc              magenta           none
+Repeat            -> Statement
+Special              magenta           none
+SpecialChar          magenta           none
+SpecialComment       red               none
+Statement            cyan              none
+StorageClass         brightcyan        none
+String               brightgreen       none
+Structure            red               none
+Tag               -> Special
+Todo                 magenta           none              bold
+Type                 brightmagenta     none
+Typedef           -> Type
+Underlined           none              none              underline
+# See `:help lCursor`
+lCursor           -> Cursor
+# See `:help CursorIM`
+CursorIM             none              fg
+# }}}
+
+# Additional highlight groups {{{
+# Add additional highlight groups here if you want
+NormalMode           cyan              fg                reverse
+InsertMode           brightgreen       bg                reverse
+ReplaceMode          yellow            bg                reverse
+VisualMode           blue              fg                reverse
+CommandMode          magenta           fg                reverse
+# }}}
+
+# NeoVim
+verbatim
+if has('nvim')
+endverbatim
+TermCursor        -> Cursor
+TermCursorNC         fg                white
+verbatim
+let g:terminal_color_0='@guiblack'
+let g:terminal_color_1='@guired'
+let g:terminal_color_2='@guigreen'
+let g:terminal_color_3='@guiyellow'
+let g:terminal_color_4='@guiblue'
+let g:terminal_color_5='@guimagenta'
+let g:terminal_color_6='@guicyan'
+let g:terminal_color_7='@guiwhite'
+let g:terminal_color_8='@guibrightblack'
+let g:terminal_color_9='@guibrightred'
+let g:terminal_color_10='@guibrightgreen'
+let g:terminal_color_11='@guibrightyellow'
+let g:terminal_color_12='@guibrightblue'
+let g:terminal_color_13='@guibrightmagenta'
+let g:terminal_color_14='@guibrightcyan'
+let g:terminal_color_15='@guibrightwhite'
+endif
+endverbatim
+
+
+# Plugin specific highlight groups {{{
+# }}}
+
+# Filetype specific highlight groups {{{
+# Vim {{{
+vimCommentTitle      red               none
+vimMapModKey         yellow            none
+vimMapMod            yellow            none
+vimBracket           brightcyan        none
+vimNotation          brightcyan        none
+vimUserFunc       -> Function
+# }}}
+# Git {{{
+gitcommitComment     white             none              g=italic
+# }}}
+# Markdown {{{
+markdownHeadingDelimiter yellow        none
+markdownURL          brightmagenta     none
+htmlItalic           fg                none              g=italic
+htmlBold             fg                none              bold
+htmlBoldItalic       fg                none              bold
+# }}}
+# JavaScript {{{
+javascriptBraces  -> Delimiter
+# }}}
+# Syntastic {{{
+SyntasticErrorSign   red               none
+SyntasticWarningSign yellow            none
+# }}}
+# }}}
+
+# Terminal italic
+verbatim
+if get(g:, "wwdc16_term_italics", 1)
+  hi Comment cterm=italic
+  hi Folded cterm=italic
+  hi htmlItalic cterm=italic
+  hi htmlBoldItalic cterm=NONE,bold,italic
+  hi gitcommitComment cterm=italic
+endif
+endverbatim
+
+# WWDC16 color palette
+verbatim
+let g:wwdc16_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
+    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
+    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+endverbatim
