@@ -10,23 +10,18 @@ Maintainer:  Lifepillar <lifepillar@lifepillar.me>
 Website:     https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
+Terminal Colors: 16
 # }}}
 
 # Documentation {{{
 documentation
 ==============================================================================
-@fullname Colorscheme Options                 *@shortname-colorscheme-options*
+@fullname colorscheme                         *@shortname-colorscheme*
 
                                                    *g:@shortname_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@shortname_term_italics = 1
-<
-                                                   *g:@shortname_transp_bg*
-Set to 1 if you want a transparent background. Takes effect only in the
-terminal.
->
-  let g:@shortname_transp_bg = 0
 <
 enddocumentation
 # }}}
