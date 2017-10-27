@@ -1,0 +1,15 @@
+
+==============================================================================
+WWDC16 Colorscheme Options                 *wwdc16-colorscheme-options*
+
+                                                   *g:wwdc16_term_italics*
+Set to 0 if you want to disable italics in the terminal.
+>
+  let g:wwdc16_term_italics = 1
+<
+                                                   *g:wwdc16_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:wwdc16_transp_bg = 0
+<

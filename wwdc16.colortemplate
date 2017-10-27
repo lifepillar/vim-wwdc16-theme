@@ -12,6 +12,25 @@ Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
 # }}}
 
+# Documentation {{{
+documentation
+==============================================================================
+@fullname Colorscheme Options                 *@shortname-colorscheme-options*
+
+                                                   *g:@shortname_term_italics*
+Set to 0 if you want to disable italics in the terminal.
+>
+  let g:@shortname_term_italics = 1
+<
+                                                   *g:@shortname_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@shortname_transp_bg = 0
+<
+enddocumentation
+# }}}
+
 # Color palette {{{
 # Color name                GUI                  Base256    Base16 (optional)
 Color: black                rgb( 41,  44,  54)      ~        0
