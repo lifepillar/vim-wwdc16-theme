@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Thu Oct 26 17:15:42 2017
+" Last Updated: Fri Oct 27 08:57:45 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 16)
@@ -23,20 +23,8 @@ let g:colors_name = 'wwdc16'
 
 if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
 hi Normal ctermfg=15 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi DiffAdd ctermfg=10 ctermbg=NONE guifg=#95c76f guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi Pmenu ctermfg=NONE ctermbg=6 guifg=NONE guibg=#64878f guisp=NONE cterm=NONE gui=NONE
-hi StatusLineNC ctermfg=6 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=NONE ctermbg=6 guifg=NONE guibg=#64878f guisp=NONE cterm=NONE gui=NONE
-hi InsertMode ctermfg=10 ctermbg=NONE guifg=#95c76f guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 else
 hi Normal ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
-hi DiffAdd ctermfg=10 ctermbg=bg guifg=#95c76f guibg=bg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi Pmenu ctermfg=bg ctermbg=6 guifg=bg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
-hi StatusLineNC ctermfg=6 ctermbg=bg guifg=#64878f guibg=bg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=bg ctermbg=6 guifg=bg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
-hi InsertMode ctermfg=10 ctermbg=bg guifg=#95c76f guibg=bg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=3 ctermbg=bg guifg=#d28e5d guibg=bg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 endif
 hi ColorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi Conceal ctermfg=6 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -44,6 +32,7 @@ hi Cursor ctermfg=fg ctermbg=4 guifg=fg guibg=#4670d8 guisp=NONE cterm=NONE gui=
 hi CursorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi CursorLineNr ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi DiffAdd ctermfg=10 ctermbg=0 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=3 ctermbg=fg guifg=#d28e5d guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffDelete ctermfg=1 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=2 ctermbg=fg guifg=#52bd58 guibg=fg guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
@@ -58,6 +47,7 @@ hi MatchParen ctermfg=8 ctermbg=3 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=N
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=0 ctermbg=6 guifg=#292c36 guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=8 ctermbg=8 guifg=#333344 guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=fg ctermbg=3 guifg=fg guibg=#d28e5d guisp=NONE cterm=NONE gui=NONE
 hi PmenuThumb ctermfg=8 ctermbg=3 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=NONE gui=NONE
@@ -71,8 +61,10 @@ hi SpellCap ctermfg=13 ctermbg=NONE guifg=#8485ce guibg=NONE guisp=#b73999 cterm
 hi SpellLocal ctermfg=13 ctermbg=NONE guifg=#8485ce guibg=NONE guisp=#b73999 cterm=NONE,underline gui=NONE,undercurl
 hi SpellRare ctermfg=13 ctermbg=NONE guifg=#8485ce guibg=NONE guisp=#b73999 cterm=NONE,underline gui=NONE,undercurl
 hi StatusLine ctermfg=6 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi StatusLineNC ctermfg=6 ctermbg=0 guifg=#64878f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
+hi TabLine ctermfg=0 ctermbg=6 guifg=#292c36 guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi TabLineFill ctermfg=fg ctermbg=6 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=fg ctermbg=6 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi Title ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -119,6 +111,8 @@ hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=N
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
 hi NormalMode ctermfg=6 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi InsertMode ctermfg=10 ctermbg=0 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi ReplaceMode ctermfg=3 ctermbg=0 guifg=#d28e5d guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualMode ctermfg=4 ctermbg=fg guifg=#4670d8 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi CommandMode ctermfg=5 ctermbg=fg guifg=#b73999 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 if has('nvim')
@@ -191,7 +185,7 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 " CursorColumn         none              brightblack
 " CursorLine           none              brightblack
 " CursorLineNr         fg                none
-" DiffAdd              brightgreen       bg                reverse
+" DiffAdd              brightgreen       black             reverse
 " DiffChange           yellow            fg                reverse
 " DiffDelete           red               fg                reverse
 " DiffText             green             fg                bold,reverse
@@ -206,7 +200,7 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 " ModeMsg              fg                none
 " MoreMsg              white             none
 " NonText              fg                none
-" Pmenu                bg                cyan
+" Pmenu                black             cyan
 " PmenuSbar            brightblack       brightblack
 " PmenuSel             fg                yellow
 " PmenuThumb           brightblack       yellow
@@ -220,10 +214,10 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 " SpellLocal           brightmagenta     none              s=magenta t=underline g=undercurl
 " SpellRare            brightmagenta     none              s=magenta t=underline g=undercurl
 " StatusLine           cyan              fg                reverse
-" StatusLineNC         cyan              bg                reverse
+" StatusLineNC         cyan              black             reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" TabLine              bg                cyan
+" TabLine              black             cyan
 " TabLineFill          fg                cyan
 " TabLineSel           fg                cyan
 " Title                yellow            none              bold
@@ -270,8 +264,8 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 " lCursor           -> Cursor
 " CursorIM             none              fg
 " NormalMode           cyan              fg                reverse
-" InsertMode           brightgreen       bg                reverse
-" ReplaceMode          yellow            bg                reverse
+" InsertMode           brightgreen       black             reverse
+" ReplaceMode          yellow            black             reverse
 " VisualMode           blue              fg                reverse
 " CommandMode          magenta           fg                reverse
 " verbatim

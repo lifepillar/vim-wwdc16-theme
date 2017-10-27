@@ -44,7 +44,7 @@ Cursor               fg                blue
 CursorColumn         none              brightblack
 CursorLine           none              brightblack
 CursorLineNr         fg                none
-DiffAdd              brightgreen       bg                reverse
+DiffAdd              brightgreen       black             reverse
 DiffChange           yellow            fg                reverse
 DiffDelete           red               fg                reverse
 DiffText             green             fg                bold,reverse
@@ -59,7 +59,7 @@ MatchParen           brightblack       yellow            bold,reverse
 ModeMsg              fg                none
 MoreMsg              white             none
 NonText              fg                none
-Pmenu                bg                cyan
+Pmenu                black             cyan
 PmenuSbar            brightblack       brightblack
 PmenuSel             fg                yellow
 PmenuThumb           brightblack       yellow
@@ -73,10 +73,10 @@ SpellCap             brightmagenta     none              s=magenta t=underline g
 SpellLocal           brightmagenta     none              s=magenta t=underline g=undercurl
 SpellRare            brightmagenta     none              s=magenta t=underline g=undercurl
 StatusLine           cyan              fg                reverse
-StatusLineNC         cyan              bg                reverse
+StatusLineNC         cyan              black             reverse
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-TabLine              bg                cyan
+TabLine              black             cyan
 TabLineFill          fg                cyan
 TabLineSel           fg                cyan
 Title                yellow            none              bold
@@ -130,8 +130,8 @@ CursorIM             none              fg
 # Additional highlight groups {{{
 # Add additional highlight groups here if you want
 NormalMode           cyan              fg                reverse
-InsertMode           brightgreen       bg                reverse
-ReplaceMode          yellow            bg                reverse
+InsertMode           brightgreen       black             reverse
+ReplaceMode          yellow            black             reverse
 VisualMode           blue              fg                reverse
 CommandMode          magenta           fg                reverse
 # }}}
