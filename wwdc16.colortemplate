@@ -33,10 +33,10 @@ Color: red                  rgb(220,  60,  60)      ~        1
 Color: green                rgb( 82, 189,  88)      ~        2
 Color: yellow               rgb(210, 142,  93)      ~        3
 Color: blue                 rgb( 70, 112, 216)      ~        4
-Color: magenta              rgb(183,  57, 153)      133      5
+Color: magenta              rgb(183,  73, 137)      133      5
 Color: cyan                 rgb(100, 135, 143)      ~        6
 Color: white                rgb(153, 153, 153)      ~        7
-Color: brightblack          rgb( 51,  51,  68)      ~        8
+Color: brightblack          rgb( 51,  51,  68)      237      8
 Color: brightred            rgb(248,  69,  71)      ~        9
 Color: brightgreen          rgb(149, 199, 111)      ~        10
 Color: brightyellow         rgb(239, 161, 107)      ~        11
