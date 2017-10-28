@@ -20,8 +20,8 @@ WWDC16 also works in MacVim, gVim, etc…: no configuration is needed.
 For terminals not supporting true colors, you have two possibilities:
 
 1. set your terminal's 16 ANSI color to the WWDC16 palette (a terminal profile
-   for macOS's Terminal.app is included in the plugin), or,
-2. Use an approximate palette based on xterm's 256 colors. To do so, put this in
+   for macOS's Terminal.app is included in the plugin), or
+2. use an approximate palette based on xterm's 256 colors. To do so, put this in
    your `vimrc`:
    ```vim
    let g:wwdc16_use16 = 0
