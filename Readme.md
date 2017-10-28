@@ -17,12 +17,15 @@ This color scheme works **out of the box** if you use:
 
 WWDC16 also works in MacVim, gVim, etc…: no configuration is needed.
 
-For terminals not supporting true colors, your terminal's 16 ANSI colors should
-be set to the WWDC16 palette, too (otherwise, WWDC16 will just use whatever
-colors your terminal is currently using). For macOS's Terminal.app and iTerm2,
-terminal profiles are included in the repo (note that iTerm2 *does* support true
-colors).
+For terminals not supporting true colors, you have two possibilities:
 
+1. set your terminal's 16 ANSI color to the WWDC16 palette (a terminal profile
+   for macOS's Terminal.app is included in the plugin), or,
+2. Use an approximate palette based on xterm's 256 colors. To do so, put this in
+   your `vimrc`:
+   ```vim
+   let g:wwdc16_use16 = 0
+   ```
 
 ## Options
 

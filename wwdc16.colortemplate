@@ -10,7 +10,7 @@ Maintainer:  Lifepillar <lifepillar@lifepillar.me>
 Website:     https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
-Terminal Colors: 16
+Terminal Colors: 16, 256
 # }}}
 
 # Documentation {{{
@@ -33,7 +33,7 @@ Color: red                  rgb(220,  60,  60)      ~        1
 Color: green                rgb( 82, 189,  88)      ~        2
 Color: yellow               rgb(210, 142,  93)      ~        3
 Color: blue                 rgb( 70, 112, 216)      ~        4
-Color: magenta              rgb(183,  57, 153)      ~        5
+Color: magenta              rgb(183,  57, 153)      133      5
 Color: cyan                 rgb(100, 135, 143)      ~        6
 Color: white                rgb(153, 153, 153)      ~        7
 Color: brightblack          rgb( 51,  51,  68)      ~        8

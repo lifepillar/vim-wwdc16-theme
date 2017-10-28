@@ -16,3 +16,8 @@ terminal.
 >
   let g:wwdc16_transp_bg = 0
 <
+                                          *g:wwdc16_use16*
+Set to 0 if you want to use 256 colors.
+>
+  let g:wwdc16_use16 = 1
+<
