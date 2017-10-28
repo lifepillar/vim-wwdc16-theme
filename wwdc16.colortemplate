@@ -210,7 +210,7 @@ SyntasticWarningSign yellow            none
 
 # Terminal italic
 verbatim
-if get(g:, "wwdc16_term_italics", 1)
+if get(g:, "@shortname_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
@@ -221,7 +221,7 @@ endverbatim
 
 # WWDC16 color palette
 verbatim
-let g:wwdc16_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
+let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
     \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
     \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
 endverbatim
