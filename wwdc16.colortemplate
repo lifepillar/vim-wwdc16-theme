@@ -18,10 +18,10 @@ documentation
 ==============================================================================
 @fullname colorscheme                         *@shortname-colorscheme*
 
-                                                   *g:@shortname_term_italics*
+                                                   *g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
-  let g:@shortname_term_italics = 1
+  let g:@optionprefix_term_italics = 1
 <
 enddocumentation
 # }}}
@@ -210,7 +210,7 @@ SyntasticWarningSign yellow            none
 
 # Terminal italic
 verbatim
-if get(g:, "@shortname_term_italics", 1)
+if get(g:, "@optionprefix_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
