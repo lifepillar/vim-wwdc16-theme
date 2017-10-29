@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sat Oct 28 19:29:25 2017
+" Last Updated: Sun Oct 29 18:17:54 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -339,7 +339,16 @@ endif
 " Color: brightcyan           rgb(  0, 171, 165)      ~        14
 " Color: brightwhite          rgb(255, 255, 255)      ~        15
 " Background: dark
-" Normal               brightwhite       black
+" verbatim
+" endverbatim
+"     Normal brightwhite none
+" verbatim
+" else
+" endverbatim
+"     Normal brightwhite black
+" verbatim
+" endif
+" endverbatim
 " ColorColumn          none              brightblack
 " Conceal              cyan              none
 " Cursor               fg                blue
