@@ -85,7 +85,7 @@ EndOfBuffer          brightblack       none
 ErrorMsg             red               fg                reverse
 FoldColumn           white             none
 Folded               white             brightblack       g=italic
-IncSearch            yellow            fg                t=reverse g=standout
+IncSearch            magenta           fg                t=reverse g=standout
 LineNr               white             none
 MatchParen           brightblack       yellow            bold,reverse
 ModeMsg              fg                none
@@ -199,6 +199,9 @@ endverbatim
 # }}}
 
 # Filetype specific highlight groups {{{
+verbatim
+if get(g:, '@optionprefix_enable_syntax_hi_groups', 0)
+endverbatim
 # Vim {{{
 vimCommentTitle      red               none
 vimMapModKey         yellow            none
@@ -224,6 +227,9 @@ javascriptBraces  -> Delimiter
 SyntasticErrorSign   red               none
 SyntasticWarningSign yellow            none
 # }}}
+verbatim
+endif
+endverbatim
 # }}}
 
 # Terminal italic

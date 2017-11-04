@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Oct 29 18:17:54 2017
+" Last Updated: Sat Nov  4 20:52:40 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -60,7 +60,7 @@ hi EndOfBuffer ctermfg=8 ctermbg=NONE guifg=#333344 guibg=NONE guisp=NONE cterm=
 hi ErrorMsg ctermfg=1 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi FoldColumn ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=7 ctermbg=8 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE,italic
-hi IncSearch ctermfg=3 ctermbg=fg guifg=#d28e5d guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
+hi IncSearch ctermfg=5 ctermbg=fg guifg=#b74989 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi LineNr ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=8 ctermbg=3 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -154,6 +154,7 @@ let g:terminal_color_13='#8485ce'
 let g:terminal_color_14='#00aba5'
 let g:terminal_color_15='#ffffff'
 endif
+if get(g:, 'wwdc16_enable_syntax_hi_groups', 0)
 hi vimCommentTitle ctermfg=1 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi vimMapModKey ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi vimMapMod ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -169,6 +170,7 @@ hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=N
 hi! link javascriptBraces Delimiter
 hi SyntasticErrorSign ctermfg=1 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SyntasticWarningSign ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
+endif
 if get(g:, "wwdc16_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
@@ -201,7 +203,7 @@ hi EndOfBuffer ctermfg=237 ctermbg=NONE guifg=#333344 guibg=NONE guisp=NONE cter
 hi ErrorMsg ctermfg=167 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi FoldColumn ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=247 ctermbg=237 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE,italic
-hi IncSearch ctermfg=173 ctermbg=fg guifg=#d28e5d guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
+hi IncSearch ctermfg=133 ctermbg=fg guifg=#b74989 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi LineNr ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=237 ctermbg=173 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -295,6 +297,7 @@ let g:terminal_color_13='#8485ce'
 let g:terminal_color_14='#00aba5'
 let g:terminal_color_15='#ffffff'
 endif
+if get(g:, 'wwdc16_enable_syntax_hi_groups', 0)
 hi vimCommentTitle ctermfg=167 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi vimMapModKey ctermfg=173 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi vimMapMod ctermfg=173 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -310,6 +313,7 @@ hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=N
 hi! link javascriptBraces Delimiter
 hi SyntasticErrorSign ctermfg=167 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SyntasticWarningSign ctermfg=173 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE gui=NONE
+endif
 if get(g:, "wwdc16_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
@@ -364,7 +368,7 @@ endif
 " ErrorMsg             red               fg                reverse
 " FoldColumn           white             none
 " Folded               white             brightblack       g=italic
-" IncSearch            yellow            fg                t=reverse g=standout
+" IncSearch            magenta           fg                t=reverse g=standout
 " LineNr               white             none
 " MatchParen           brightblack       yellow            bold,reverse
 " ModeMsg              fg                none
@@ -446,6 +450,8 @@ endif
 " verbatim
 " endif
 " endverbatim
+" verbatim
+" endverbatim
 " vimCommentTitle      red               none
 " vimMapModKey         yellow            none
 " vimMapMod            yellow            none
@@ -461,6 +467,9 @@ endif
 " javascriptBraces  -> Delimiter
 " SyntasticErrorSign   red               none
 " SyntasticWarningSign yellow            none
+" verbatim
+" endif
+" endverbatim
 " verbatim
 "   hi Comment cterm=italic
 "   hi Folded cterm=italic
