@@ -1,23 +1,24 @@
-
 ==============================================================================
-WWDC16 colorscheme                         *wwdc16-colorscheme*
+WWDC16 colorscheme			*wwdc16-colorscheme*
 
-                                          *g:wwdc16_term_italics*
+						*g:wwdc16_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:wwdc16_term_italics = 1
 <
-                                          *g:wwdc16_transp_bg*
+						*g:wwdc16_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
   let g:wwdc16_transp_bg = 0
 <
-==============================================================================
-WWDC16 other options                   *wwdc16-other-options*
 
-                                          *g:wwdc16_use16*
-Set to 0 if you want to use 256 colors.
+==============================================================================
+WWDC16 other options			*wwdc16-other-options*
+
+							*g:wwdc16_use16*
+Set to 1 if you want to use 16 colors.
 >
-  let g:wwdc16_use16 = 1
+	let g:wwdc16_use16 = 0
 <
+vim:tw=78:ts=8:ft=help:norl:

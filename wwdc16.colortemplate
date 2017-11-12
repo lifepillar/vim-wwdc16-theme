@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+# vim: ft=colortemplate fdm=marker ts=8
 
 # Information {{{
 # Mandatory
@@ -10,20 +10,20 @@ Maintainer:  Lifepillar <lifepillar@lifepillar.me>
 Website:     https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
-Terminal Colors: 16, 256
+Terminal Colors: 256,16
 # }}}
 
 # Documentation {{{
 documentation
 ==============================================================================
-@fullname colorscheme                         *@shortname-colorscheme*
+@fullname colorscheme			*@shortname-colorscheme*
 
-                                          *g:@optionprefix_term_italics*
+						*g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@optionprefix_term_italics = 1
 <
-                                          *g:@optionprefix_transp_bg*
+						*g:@optionprefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >

@@ -8,23 +8,23 @@ A colorful dark theme for Vim inspired by the colors of 2016's
 Looking for a companion light theme? Check out
 [vim-wwdc17-theme](https://github.com/lifepillar/vim-wwdc17-theme)!
 
-This color scheme works **out of the box** if you use:
+This color scheme works **out of the box everywhere**. For the best experience,
+you need:
 
 - Vim ≥7.4.1799 with `termguicolors` set, or
 - NeoVim,
 
 **and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
-
 WWDC16 also works in MacVim, gVim, etc…: no configuration is needed.
 
-For terminals not supporting true colors, you have two possibilities:
+**Note:** for terminals not supporting true colors, WWDC16 will fall back to use
+an approximate palette based on xterm's 256 colors. If you want exact colors in
+such terminals, you must set your terminal's 16 ANSI color to the WWDC16 palette
+(a terminal profile for macOS's Terminal.app is included in the plugin) and put
+this in your `vimrc`:
 
-1. set your terminal's 16 ANSI color to the WWDC16 palette (a terminal profile
-   for macOS's Terminal.app is included in the plugin), or
-2. use an approximate palette based on xterm's 256 colors. To do so, put this in
-   your `vimrc`:
    ```vim
-   let g:wwdc16_use16 = 0
+   let g:wwdc16_use16 = 1
    ```
 
 ## Options
