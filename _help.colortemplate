@@ -1,0 +1,18 @@
+# vim: ft=colortemplate fdm=marker ts=8
+
+documentation
+==============================================================================
+@fullname colorscheme			*@shortname-colorscheme*
+
+						*g:@optionprefix_term_italics*
+Set to 0 if you want to disable italics in the terminal.
+>
+  let g:@optionprefix_term_italics = 1
+<
+						*g:@optionprefix_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@optionprefix_transp_bg = 0
+<
+enddocumentation

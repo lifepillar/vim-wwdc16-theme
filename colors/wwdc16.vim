@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Nov 12 18:42:20 2017
+" Last Updated: Sun Nov 12 21:13:00 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -23,6 +23,10 @@ let g:colors_name = 'wwdc16'
 
 " 256-color variant
 if !get(g:, 'wwdc16_use16', 0)
+  let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
+        \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
+        \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
+
   " Color similarity table (dark background)
   "   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
   "         white: GUI=#999999/rgb(153,153,153)  Term=247 #9e9e9e/rgb(158,158,158)  [delta=1.572876]
@@ -178,13 +182,14 @@ if !get(g:, 'wwdc16_use16', 0)
     hi htmlBoldItalic cterm=NONE,bold,italic
     hi gitcommitComment cterm=italic
   endif
-  let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
-        \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
-        \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
   finish
 endif
 
 " 16-color variant
+let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
+      \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
+      \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
+
 if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
@@ -323,9 +328,6 @@ if get(g:, "wwdc16_term_italics", 1)
   hi htmlBoldItalic cterm=NONE,bold,italic
   hi gitcommitComment cterm=italic
 endif
-let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
-      \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
-      \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
 finish
 
 " Color: black                rgb( 41,  44,  54)      ~        0

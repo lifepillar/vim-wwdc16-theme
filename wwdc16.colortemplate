@@ -1,12 +1,10 @@
-# vim: ft=colortemplate fdm=marker ts=8
+# vim: ft=colortemplate fdm=marker
 
 # Information {{{
-# Mandatory
 Full name:   WWDC16
 Short name:  wwdc16
 Author:      Lifepillar <lifepillar@lifepillar.me>
 Maintainer:  Lifepillar <lifepillar@lifepillar.me>
-# Optional
 Website:     https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
@@ -14,22 +12,7 @@ Terminal Colors: 256,16
 # }}}
 
 # Documentation {{{
-documentation
-==============================================================================
-@fullname colorscheme			*@shortname-colorscheme*
-
-						*g:@optionprefix_term_italics*
-Set to 0 if you want to disable italics in the terminal.
->
-  let g:@optionprefix_term_italics = 1
-<
-						*g:@optionprefix_transp_bg*
-Set to 1 if you want a transparent background. Takes effect only in the
-terminal.
->
-  let g:@optionprefix_transp_bg = 0
-<
-enddocumentation
+Include: _help.colortemplate
 # }}}
 
 # Color palette {{{
@@ -50,6 +33,12 @@ Color: brightblue           rgb( 82, 131, 255)      ~        12
 Color: brightmagenta        rgb(132, 133, 206)      ~        13
 Color: brightcyan           rgb(  0, 171, 165)      ~        14
 Color: brightwhite          rgb(255, 255, 255)      ~        15
+
+verbatim
+let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
+    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
+    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+endverbatim
 # }}}
 
 Background: dark
@@ -168,7 +157,7 @@ VisualMode           blue              fg                reverse
 CommandMode          magenta           fg                reverse
 # }}}
 
-# NeoVim
+# NeoVim {{{
 verbatim
 if has('nvim')
 endverbatim
@@ -193,9 +182,6 @@ let g:terminal_color_14='@guibrightcyan'
 let g:terminal_color_15='@guibrightwhite'
 endif
 endverbatim
-
-
-# Plugin specific highlight groups {{{
 # }}}
 
 # Filetype specific highlight groups {{{
@@ -232,7 +218,7 @@ endif
 endverbatim
 # }}}
 
-# Terminal italic
+# Terminal italic {{{
 verbatim
 if get(g:, "@optionprefix_term_italics", 1)
   hi Comment cterm=italic
@@ -242,10 +228,4 @@ if get(g:, "@optionprefix_term_italics", 1)
   hi gitcommitComment cterm=italic
 endif
 endverbatim
-
-# WWDC16 color palette
-verbatim
-let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
-    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
-    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
-endverbatim
+# }}}
