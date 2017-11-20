@@ -146,6 +146,11 @@ Underlined           none              none              underline
 lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              fg
+# See `:help terminal-size-color`
+Terminal             fg                bg
+# See `:help window-toolbar`
+ToolbarLine          none              brightblack
+ToolbarButton        cyan              brightblack       bold
 # }}}
 
 # Additional highlight groups {{{
