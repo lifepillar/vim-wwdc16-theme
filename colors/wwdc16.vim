@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Mon Nov 20 21:55:39 2017
+" Last Updated: Tue Nov 21 08:43:02 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -46,8 +46,10 @@ if !get(g:, 'wwdc16_use16', 0)
   "   brightblack: GUI=#333344/rgb( 51, 51, 68)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=9.891913]
   if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
     hi Normal ctermfg=231 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
   else
     hi Normal ctermfg=231 ctermbg=236 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
+    hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
   endif
   hi ColorColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi Conceal ctermfg=66 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -133,7 +135,6 @@ if !get(g:, 'wwdc16_use16', 0)
   hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi! link lCursor Cursor
   hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
-  hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
   hi ToolbarLine ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi ToolbarButton ctermfg=66 ctermbg=237 guifg=#64878f guibg=#333344 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi NormalMode ctermfg=66 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -195,8 +196,10 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 
 if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
   hi Normal ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi Conceal ctermfg=6 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -282,7 +285,6 @@ hi! link Typedef Type
 hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
-hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
 hi ToolbarLine ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi ToolbarButton ctermfg=6 ctermbg=8 guifg=#64878f guibg=#333344 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NormalMode ctermfg=6 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -353,8 +355,10 @@ finish
 " Color: brightcyan           rgb(  0, 171, 165)      ~        14
 " Color: brightwhite          rgb(255, 255, 255)      ~        15
 " Background: dark
-"     Normal brightwhite none
-"     Normal brightwhite black
+"     Normal               brightwhite       none
+"     Terminal             fg                none
+"     Normal               brightwhite       black
+"     Terminal             fg                bg
 " ColorColumn          none              brightblack
 " Conceal              cyan              none
 " Cursor               fg                blue
@@ -439,7 +443,6 @@ finish
 " Underlined           none              none              underline
 " lCursor           -> Cursor
 " CursorIM             none              fg
-" Terminal             fg                bg
 " ToolbarLine          none              brightblack
 " ToolbarButton        cyan              brightblack       bold
 " NormalMode           cyan              fg                reverse
