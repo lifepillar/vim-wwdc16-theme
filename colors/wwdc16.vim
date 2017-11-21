@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Tue Nov 21 08:43:02 2017
+" Last Updated: Tue Nov 21 09:41:17 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -49,7 +49,7 @@ if !get(g:, 'wwdc16_use16', 0)
     hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
   else
     hi Normal ctermfg=231 ctermbg=236 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
-    hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+    hi Terminal ctermfg=fg ctermbg=236 guifg=fg guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
   endif
   hi ColorColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi Conceal ctermfg=66 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -199,7 +199,7 @@ if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
   hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
   hi Normal ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
-  hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=fg ctermbg=0 guifg=fg guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi Conceal ctermfg=6 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -358,7 +358,7 @@ finish
 "     Normal               brightwhite       none
 "     Terminal             fg                none
 "     Normal               brightwhite       black
-"     Terminal             fg                bg
+"     Terminal             fg                black
 " ColorColumn          none              brightblack
 " Conceal              cyan              none
 " Cursor               fg                blue

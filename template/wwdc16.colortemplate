@@ -55,7 +55,7 @@ else
 endverbatim
     # Opaque background
     Normal               brightwhite       black
-    Terminal             fg                bg
+    Terminal             fg                black
 verbatim
 endif
 endverbatim
