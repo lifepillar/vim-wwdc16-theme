@@ -1,16 +1,21 @@
 ==============================================================================
 WWDC16 colorscheme			*wwdc16-colorscheme*
 
+				*g:wwdc16_enable_syntax_hi_groups*
+Set to 1 to enable some filetype-specific highlight groups (not recommended).
+>
+	let g:wwdc16_enable_syntax_hi_groups = 0
+<
 						*g:wwdc16_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
-  let g:wwdc16_term_italics = 1
+	let g:wwdc16_term_italics = 1
 <
 						*g:wwdc16_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
-  let g:wwdc16_transp_bg = 0
+	let g:wwdc16_transp_bg = 0
 <
 
 ==============================================================================
