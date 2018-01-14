@@ -49,12 +49,18 @@ if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
 endverbatim
     # Transparent background
     Normal               brightwhite       none
+    CursorLineNr         fg                none
+    FoldColumn           white             none
+    LineNr               white             none
     Terminal             fg                none
 verbatim
 else
 endverbatim
     # Opaque background
     Normal               brightwhite       black
+    CursorLineNr         fg                brightblack
+    FoldColumn           white             brightblack
+    LineNr               white             brightblack
     Terminal             fg                black
 verbatim
 endif
@@ -66,7 +72,6 @@ Conceal              cyan              none
 Cursor               fg                blue
 CursorColumn         none              brightblack
 CursorLine           none              brightblack
-CursorLineNr         fg                none
 DiffAdd              brightgreen       black             reverse
 DiffChange           yellow            fg                reverse
 DiffDelete           red               fg                reverse
@@ -74,10 +79,8 @@ DiffText             green             fg                bold,reverse
 Directory            brightgreen       none
 EndOfBuffer          brightblack       none
 ErrorMsg             red               fg                reverse
-FoldColumn           white             none
 Folded               white             brightblack       g=italic
 IncSearch            magenta           fg                t=reverse g=standout
-LineNr               white             none
 MatchParen           brightblack       yellow            bold,reverse
 ModeMsg              fg                none
 MoreMsg              white             none

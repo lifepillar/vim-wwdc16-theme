@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Tue Nov 21 09:41:17 2017
+" Last Updated: Sun Jan 14 18:35:21 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -46,9 +46,15 @@ if !get(g:, 'wwdc16_use16', 0)
   "   brightblack: GUI=#333344/rgb( 51, 51, 68)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=9.891913]
   if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
     hi Normal ctermfg=231 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi CursorLineNr ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi FoldColumn ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi LineNr ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
   else
     hi Normal ctermfg=231 ctermbg=236 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
+    hi CursorLineNr ctermfg=fg ctermbg=237 guifg=fg guibg=#333344 guisp=NONE cterm=NONE gui=NONE
+    hi FoldColumn ctermfg=247 ctermbg=237 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE
+    hi LineNr ctermfg=247 ctermbg=237 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE
     hi Terminal ctermfg=fg ctermbg=236 guifg=fg guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
   endif
   hi ColorColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
@@ -56,7 +62,6 @@ if !get(g:, 'wwdc16_use16', 0)
   hi Cursor ctermfg=fg ctermbg=26 guifg=fg guibg=#4670d8 guisp=NONE cterm=NONE gui=NONE
   hi CursorColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi CursorLine ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
-  hi CursorLineNr ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi DiffAdd ctermfg=150 ctermbg=236 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffChange ctermfg=173 ctermbg=fg guifg=#d28e5d guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffDelete ctermfg=167 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -64,10 +69,8 @@ if !get(g:, 'wwdc16_use16', 0)
   hi Directory ctermfg=150 ctermbg=NONE guifg=#95c76f guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi EndOfBuffer ctermfg=237 ctermbg=NONE guifg=#333344 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi ErrorMsg ctermfg=167 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi FoldColumn ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Folded ctermfg=247 ctermbg=237 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=133 ctermbg=fg guifg=#b74989 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
-  hi LineNr ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi MatchParen ctermfg=237 ctermbg=173 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi MoreMsg ctermfg=247 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -196,9 +199,15 @@ let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '
 
 if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi CursorLineNr ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi FoldColumn ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi LineNr ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
   hi Normal ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
+  hi CursorLineNr ctermfg=fg ctermbg=8 guifg=fg guibg=#333344 guisp=NONE cterm=NONE gui=NONE
+  hi FoldColumn ctermfg=7 ctermbg=8 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE
+  hi LineNr ctermfg=7 ctermbg=8 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi Terminal ctermfg=fg ctermbg=0 guifg=fg guibg=#292c36 guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
@@ -206,7 +215,6 @@ hi Conceal ctermfg=6 ctermbg=NONE guifg=#64878f guibg=NONE guisp=NONE cterm=NONE
 hi Cursor ctermfg=fg ctermbg=4 guifg=fg guibg=#4670d8 guisp=NONE cterm=NONE gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
-hi CursorLineNr ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=10 ctermbg=0 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=3 ctermbg=fg guifg=#d28e5d guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffDelete ctermfg=1 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -214,10 +222,8 @@ hi DiffText ctermfg=2 ctermbg=fg guifg=#52bd58 guibg=fg guisp=NONE cterm=NONE,bo
 hi Directory ctermfg=10 ctermbg=NONE guifg=#95c76f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi EndOfBuffer ctermfg=8 ctermbg=NONE guifg=#333344 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi ErrorMsg ctermfg=1 ctermbg=fg guifg=#dc3c3c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi FoldColumn ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=7 ctermbg=8 guifg=#999999 guibg=#333344 guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=5 ctermbg=fg guifg=#b74989 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,standout
-hi LineNr ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=8 ctermbg=3 guifg=#333344 guibg=#d28e5d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=7 ctermbg=NONE guifg=#999999 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -356,15 +362,20 @@ finish
 " Color: brightwhite          rgb(255, 255, 255)      ~        15
 " Background: dark
 "     Normal               brightwhite       none
+"     CursorLineNr         fg                none
+"     FoldColumn           white             none
+"     LineNr               white             none
 "     Terminal             fg                none
 "     Normal               brightwhite       black
+"     CursorLineNr         fg                brightblack
+"     FoldColumn           white             brightblack
+"     LineNr               white             brightblack
 "     Terminal             fg                black
 " ColorColumn          none              brightblack
 " Conceal              cyan              none
 " Cursor               fg                blue
 " CursorColumn         none              brightblack
 " CursorLine           none              brightblack
-" CursorLineNr         fg                none
 " DiffAdd              brightgreen       black             reverse
 " DiffChange           yellow            fg                reverse
 " DiffDelete           red               fg                reverse
@@ -372,10 +383,8 @@ finish
 " Directory            brightgreen       none
 " EndOfBuffer          brightblack       none
 " ErrorMsg             red               fg                reverse
-" FoldColumn           white             none
 " Folded               white             brightblack       g=italic
 " IncSearch            magenta           fg                t=reverse g=standout
-" LineNr               white             none
 " MatchParen           brightblack       yellow            bold,reverse
 " ModeMsg              fg                none
 " MoreMsg              white             none
