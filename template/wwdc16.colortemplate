@@ -158,7 +158,7 @@ ToolbarButton        cyan              brightblack       bold
 
 # Additional highlight groups {{{
 # Add additional highlight groups here if you want
-NormalMode           cyan              fg                reverse
+NormalMode           white             fg                reverse
 InsertMode           brightgreen       black             reverse
 ReplaceMode          yellow            black             reverse
 VisualMode           blue              fg                reverse

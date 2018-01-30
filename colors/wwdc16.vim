@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Jan 14 18:35:21 2018
+" Last Updated: Tue Jan 30 20:48:34 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -140,7 +140,7 @@ if !get(g:, 'wwdc16_use16', 0)
   hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
   hi ToolbarLine ctermfg=NONE ctermbg=237 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
   hi ToolbarButton ctermfg=66 ctermbg=237 guifg=#64878f guibg=#333344 guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi NormalMode ctermfg=66 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi NormalMode ctermfg=247 ctermbg=fg guifg=#999999 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi InsertMode ctermfg=150 ctermbg=236 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi ReplaceMode ctermfg=173 ctermbg=236 guifg=#d28e5d guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualMode ctermfg=26 ctermbg=fg guifg=#4670d8 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -293,7 +293,7 @@ hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
 hi ToolbarLine ctermfg=NONE ctermbg=8 guifg=NONE guibg=#333344 guisp=NONE cterm=NONE gui=NONE
 hi ToolbarButton ctermfg=6 ctermbg=8 guifg=#64878f guibg=#333344 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi NormalMode ctermfg=6 ctermbg=fg guifg=#64878f guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi NormalMode ctermfg=7 ctermbg=fg guifg=#999999 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi InsertMode ctermfg=10 ctermbg=0 guifg=#95c76f guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi ReplaceMode ctermfg=3 ctermbg=0 guifg=#d28e5d guibg=#292c36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualMode ctermfg=4 ctermbg=fg guifg=#4670d8 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -454,7 +454,7 @@ finish
 " CursorIM             none              fg
 " ToolbarLine          none              brightblack
 " ToolbarButton        cyan              brightblack       bold
-" NormalMode           cyan              fg                reverse
+" NormalMode           white             fg                reverse
 " InsertMode           brightgreen       black             reverse
 " ReplaceMode          yellow            black             reverse
 " VisualMode           blue              fg                reverse
