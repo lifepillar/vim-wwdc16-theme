@@ -106,7 +106,7 @@ TabLine              black             cyan
 TabLineFill          fg                cyan
 TabLineSel           fg                cyan
 Title                yellow            none              bold
-VertSplit            cyan              cyan
+VertSplit            brightblack       cyan
 Visual               blue              fg                reverse
 VisualNOS            fg                blue
 WarningMsg           red               none

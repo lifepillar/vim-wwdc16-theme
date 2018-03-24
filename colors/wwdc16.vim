@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Tue Jan 30 20:48:34 2018
+" Last Updated: Sat Mar 24 20:47:34 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -96,7 +96,7 @@ if !get(g:, 'wwdc16_use16', 0)
   hi TabLineFill ctermfg=fg ctermbg=66 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
   hi TabLineSel ctermfg=fg ctermbg=66 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
   hi Title ctermfg=173 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi VertSplit ctermfg=66 ctermbg=66 guifg=#64878f guibg=#64878f guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=237 ctermbg=66 guifg=#333344 guibg=#64878f guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=26 ctermbg=fg guifg=#4670d8 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=fg ctermbg=26 guifg=fg guibg=#4670d8 guisp=NONE cterm=NONE gui=NONE
   hi WarningMsg ctermfg=167 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -249,7 +249,7 @@ hi TabLine ctermfg=0 ctermbg=6 guifg=#292c36 guibg=#64878f guisp=NONE cterm=NONE
 hi TabLineFill ctermfg=fg ctermbg=6 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=fg ctermbg=6 guifg=fg guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi Title ctermfg=3 ctermbg=NONE guifg=#d28e5d guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi VertSplit ctermfg=6 ctermbg=6 guifg=#64878f guibg=#64878f guisp=NONE cterm=NONE gui=NONE
+hi VertSplit ctermfg=8 ctermbg=6 guifg=#333344 guibg=#64878f guisp=NONE cterm=NONE gui=NONE
 hi Visual ctermfg=4 ctermbg=fg guifg=#4670d8 guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=fg ctermbg=4 guifg=fg guibg=#4670d8 guisp=NONE cterm=NONE gui=NONE
 hi WarningMsg ctermfg=1 ctermbg=NONE guifg=#dc3c3c guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -410,7 +410,7 @@ finish
 " TabLineFill          fg                cyan
 " TabLineSel           fg                cyan
 " Title                yellow            none              bold
-" VertSplit            cyan              cyan
+" VertSplit            brightblack       cyan
 " Visual               blue              fg                reverse
 " VisualNOS            fg                blue
 " WarningMsg           red               none
