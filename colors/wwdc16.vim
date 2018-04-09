@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sat Mar 24 20:47:34 2018
+" Last Updated: Mon Apr  9 21:04:45 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
@@ -23,9 +23,9 @@ let g:colors_name = 'wwdc16'
 
 " 256-color variant
 if !get(g:, 'wwdc16_use16', 0)
-  let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
-        \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
-        \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
+  let g:terminal_ansi_colors = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
+        \                         '#64878f', '#999999', '#333344', '#f84547', '#95c76f', '#efa16b',
+        \                         '#5283ff', '#8485ce', '#00aba5', '#ffffff']
 
   " Color similarity table (dark background)
   "   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
@@ -193,9 +193,9 @@ if !get(g:, 'wwdc16_use16', 0)
 endif
 
 " 16-color variant
-let g:wwdc16_palette = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
-      \                   '#64878f', '#999999', '#333344', '#95c76f', '#efa16b',
-      \                   '#5283ff', '#8485ce', '#00aba5', '#ffffff']
+let g:terminal_ansi_colors = ['#292c36', '#dc3c3c', '#52bd58', '#d28e5d', '#4670d8', '#b74989',
+      \                         '#64878f', '#999999', '#333344', '#f84547', '#95c76f', '#efa16b',
+      \                         '#5283ff', '#8485ce', '#00aba5', '#ffffff']
 
 if !has('gui_running') && get(g:, 'wwdc16_transp_bg', 0)
   hi Normal ctermfg=15 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE

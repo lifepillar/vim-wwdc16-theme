@@ -44,7 +44,7 @@ Put the following options in your `vimrc` to customize the color scheme.
 
         let g:wwdc16_transp_bg = 1
 
-The color palette is available through `g:wwdc16_palette`.
+The color palette is available through `g:terminal_ansi_colors`.
 
 
 ## Hacking
