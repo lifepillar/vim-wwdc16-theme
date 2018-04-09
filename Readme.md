@@ -26,7 +26,7 @@ and put this in your `vimrc`:
    let g:wwdc16_use16 = 1
    ```
 Be aware that, if you set the variable above, but your terminal does not use the
-WWDC16 palette, your colors will be completely off. 
+WWDC16 palette, your colors will be completely off.
 
 
 ## Options
