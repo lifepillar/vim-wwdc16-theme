@@ -22,7 +22,7 @@ terminal.
 WWDC16 other options			*wwdc16-other-options*
 
 							*g:wwdc16_use16*
-Set to 1 if you want to use 16 colors.
+Set to 1 if you want to force the use of 16 colors.
 >
 	let g:wwdc16_use16 = 0
 <

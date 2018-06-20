@@ -4,10 +4,10 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Mon Apr  9 21:04:45 2018
+" Last Updated: Wed Jun 20 09:07:42 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
-      \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', 0) ? 16 : 256))
+      \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', &t_Co < 256) ? 16 : 256))
   echoerr '[WWDC16] There are not enough colors.'
   finish
 endif
