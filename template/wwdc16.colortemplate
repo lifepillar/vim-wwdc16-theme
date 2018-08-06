@@ -212,7 +212,7 @@ markdownHeadingDelimiter yellow        none
 markdownURL          brightmagenta     none
 htmlItalic           fg                none              g=italic
 htmlBold             fg                none              bold
-htmlBoldItalic       fg                none              bold
+htmlBoldItalic       fg                none              bold g=italic
 # }}}
 # JavaScript {{{
 javascriptBraces  -> Delimiter
@@ -226,9 +226,17 @@ endif
 endverbatim
 # }}}
 
-# Terminal italic {{{
+# Italics {{{
 verbatim
-if get(g:, "@optionprefix_term_italics", 1)
+if get(g:, '@optionprefix_no_italics', 0)
+  hi Comment gui=NONE
+  hi Folded gui=NONE
+  if get(g:, '@optionprefix_enable_syntax_hi_groups', 0)
+    hi gitcommitComment gui=NONE
+    hi htmlItalic gui=NONE
+    hi htmlBoldItalic gui=NONE,bold
+  endif
+elseif get(g:, '@optionprefix_term_italics', 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic

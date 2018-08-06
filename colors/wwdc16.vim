@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc16-theme
 " License:      This file is placed in the public domain
-" Last Updated: Mon Jul 23 21:13:29 2018
+" Last Updated: Mon Aug  6 13:34:02 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc16_use16', &t_Co < 256) ? 16 : 256))
@@ -160,12 +160,20 @@ if !get(g:, 'wwdc16_use16', &t_Co < 256)
     hi markdownURL ctermfg=104 ctermbg=NONE guifg=#8485ce guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi htmlItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
     hi htmlBold ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-    hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+    hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
     hi! link javascriptBraces Delimiter
     hi SyntasticErrorSign ctermfg=167 ctermbg=NONE guifg=#e64547 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi SyntasticWarningSign ctermfg=173 ctermbg=NONE guifg=#c98351 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   endif
-  if get(g:, "wwdc16_term_italics", 1)
+  if get(g:, 'wwdc16_no_italics', 0)
+    hi Comment gui=NONE
+    hi Folded gui=NONE
+    if get(g:, 'wwdc16_enable_syntax_hi_groups', 0)
+      hi gitcommitComment gui=NONE
+      hi htmlItalic gui=NONE
+      hi htmlBoldItalic gui=NONE,bold
+    endif
+  elseif get(g:, 'wwdc16_term_italics', 1)
     hi Comment cterm=italic
     hi Folded cterm=italic
     hi htmlItalic cterm=italic
@@ -313,12 +321,20 @@ if get(g:, 'wwdc16_enable_syntax_hi_groups', 0)
   hi markdownURL ctermfg=13 ctermbg=NONE guifg=#8485ce guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi htmlItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
   hi htmlBold ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
   hi! link javascriptBraces Delimiter
   hi SyntasticErrorSign ctermfg=1 ctermbg=NONE guifg=#e64547 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SyntasticWarningSign ctermfg=3 ctermbg=NONE guifg=#c98351 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 endif
-if get(g:, "wwdc16_term_italics", 1)
+if get(g:, 'wwdc16_no_italics', 0)
+  hi Comment gui=NONE
+  hi Folded gui=NONE
+  if get(g:, 'wwdc16_enable_syntax_hi_groups', 0)
+    hi gitcommitComment gui=NONE
+    hi htmlItalic gui=NONE
+    hi htmlBoldItalic gui=NONE,bold
+  endif
+elseif get(g:, 'wwdc16_term_italics', 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
@@ -455,7 +471,7 @@ finish
 " markdownURL          brightmagenta     none
 " htmlItalic           fg                none              g=italic
 " htmlBold             fg                none              bold
-" htmlBoldItalic       fg                none              bold
+" htmlBoldItalic       fg                none              bold g=italic
 " javascriptBraces  -> Delimiter
 " SyntasticErrorSign   red               none
 " SyntasticWarningSign yellow            none
