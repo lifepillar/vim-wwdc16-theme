@@ -10,8 +10,7 @@ Set to 1 to enable some filetype-specific highlight groups (not recommended).
 	let g:@optionprefix_enable_syntax_hi_groups = 0
 <
 						*g:@optionprefix_no_italics*
-Set to 1 if you want to disable italics everywhere (italics is enabled by
-default in GUI Vim).
+Set to 1 if you want to disable italics in terminal and GUI Vim.
 >
 	let g:@optionprefix_no_italics = 0
 <
