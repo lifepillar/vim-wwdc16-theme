@@ -6,6 +6,12 @@ Set to 1 to enable some filetype-specific highlight groups (not recommended).
 >
 	let g:wwdc16_enable_syntax_hi_groups = 0
 <
+						*g:wwdc16_no_italics*
+Set to 1 if you want to disable italics everywhere (italics is enabled by
+default in GUI Vim).
+>
+	let g:wwdc16_no_italics = 0
+<
 						*g:wwdc16_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
