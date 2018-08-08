@@ -49,19 +49,19 @@ if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
 endverbatim
     # Transparent background
     Normal               brightwhite       none
-    CursorLineNr         fg                none
+    CursorLineNr         brightwhite       none
     FoldColumn           white             none
     LineNr               white             none
-    Terminal             fg                none
+    Terminal             brightwhite       none
 verbatim
 else
 endverbatim
     # Opaque background
     Normal               brightwhite       black
-    CursorLineNr         fg                brightblack
+    CursorLineNr         brightwhite       brightblack
     FoldColumn           white             brightblack
     LineNr               white             brightblack
-    Terminal             fg                black
+    Terminal             brightwhite       black
 verbatim
 endif
 endverbatim
@@ -69,48 +69,48 @@ endverbatim
 # Group              Foreground        Background        Attributes
 ColorColumn          none              brightblack
 Conceal              cyan              none
-Cursor               fg                blue
+Cursor               brightwhite       blue
 CursorColumn         none              brightblack
 CursorLine           none              brightblack
 DiffAdd              brightgreen       black             reverse
-DiffChange           yellow            fg                reverse
-DiffDelete           red               fg                reverse
-DiffText             green             fg                bold,reverse
+DiffChange           yellow            brightwhite       reverse
+DiffDelete           red               brightwhite       reverse
+DiffText             green             brightwhite       bold,reverse
 Directory            brightgreen       none
 EndOfBuffer          brightblack       none
-ErrorMsg             red               fg                reverse
+ErrorMsg             red               brightwhite       reverse
 Folded               white             brightblack       g=italic
-IncSearch            magenta           fg                t=reverse g=standout
+IncSearch            magenta           brightwhite       t=reverse g=standout
 MatchParen           brightblack       yellow            bold,reverse
-ModeMsg              fg                none
+ModeMsg              brightwhite       none
 MoreMsg              white             none
-NonText              fg                none
+NonText              brightwhite       none
 Pmenu                black             cyan
 PmenuSbar            brightblack       brightblack
-PmenuSel             fg                yellow
+PmenuSel             brightwhite       yellow
 PmenuThumb           brightblack       yellow
 Question             white             none
 QuickFixLine     ->  Search
-Search               yellow            fg                reverse
+Search               yellow            brightwhite       reverse
 SignColumn           white             none
 SpecialKey           white             none
 SpellBad             brightmagenta     none              s=magenta t=underline g=undercurl
 SpellCap             brightmagenta     none              s=magenta t=underline g=undercurl
 SpellLocal           brightmagenta     none              s=magenta t=underline g=undercurl
 SpellRare            brightmagenta     none              s=magenta t=underline g=undercurl
-StatusLine           cyan              fg                reverse
+StatusLine           cyan              brightwhite       reverse
 StatusLineNC         cyan              black             reverse
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 TabLine              black             cyan
-TabLineFill          fg                cyan
-TabLineSel           fg                cyan
+TabLineFill          brightwhite       cyan
+TabLineSel           brightwhite       cyan
 Title                yellow            none              bold
 VertSplit            brightblack       cyan
-Visual               blue              fg                reverse
-VisualNOS            fg                blue
+Visual               blue              brightwhite       reverse
+VisualNOS            brightwhite       blue
 WarningMsg           red               none
-WildMenu             fg                magenta
+WildMenu             brightwhite       magenta
 # Other conventional group names (see `:help group-name`)
 Boolean              brightgreen       none
 Character            yellow            none
@@ -119,13 +119,13 @@ Conditional       -> Statement
 Constant             yellow            none
 Define            -> PreProc
 Debug                magenta           none
-Delimiter            fg                none
-Error                red               fg                reverse
+Delimiter            brightwhite       none
+Error                red               brightwhite       reverse
 Exception         -> Statement
 Float                brightgreen       none
 Function             green             none
 Identifier           brightcyan        none
-Ignore               fg                none
+Ignore               brightwhite       none
 Include              red               none
 Keyword              cyan              none
 Label                green             none
@@ -150,7 +150,7 @@ Underlined           none              none              underline
 # See `:help lCursor`
 lCursor           -> Cursor
 # See `:help CursorIM`
-CursorIM             none              fg
+CursorIM             none              brightwhite
 # See `:help window-toolbar`
 ToolbarLine          none              brightblack
 ToolbarButton        cyan              brightblack       bold
@@ -158,11 +158,11 @@ ToolbarButton        cyan              brightblack       bold
 
 # Additional highlight groups {{{
 # Add additional highlight groups here if you want
-NormalMode           white             fg                reverse
+NormalMode           white             brightwhite       reverse
 InsertMode           brightgreen       black             reverse
 ReplaceMode          yellow            black             reverse
-VisualMode           blue              fg                reverse
-CommandMode          magenta           fg                reverse
+VisualMode           blue              brightwhite       reverse
+CommandMode          magenta           brightwhite       reverse
 # }}}
 
 # NeoVim {{{
@@ -170,7 +170,7 @@ verbatim
 if has('nvim')
 endverbatim
 TermCursor        -> Cursor
-TermCursorNC         fg                white
+TermCursorNC         brightwhite       white
 verbatim
 let g:terminal_color_0='@guiblack'
 let g:terminal_color_1='@guired'
@@ -210,9 +210,9 @@ gitcommitComment     white             none              g=italic
 # Markdown {{{
 markdownHeadingDelimiter yellow        none
 markdownURL          brightmagenta     none
-htmlItalic           fg                none              g=italic
-htmlBold             fg                none              bold
-htmlBoldItalic       fg                none              bold g=italic
+htmlItalic           brightwhite       none              g=italic
+htmlBold             brightwhite       none              bold
+htmlBoldItalic       brightwhite       none              bold g=italic
 # }}}
 # JavaScript {{{
 javascriptBraces  -> Delimiter
