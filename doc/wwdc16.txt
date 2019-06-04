@@ -1,34 +1,22 @@
-==============================================================================
-WWDC16 colorscheme			*wwdc16-colorscheme*
+*wwdc16.txt*	For Vim version 8.1	Last change: 2019 Jun 04
 
-				*g:wwdc16_enable_syntax_hi_groups*
-Set to 1 to enable some filetype-specific highlight groups (not recommended).
->
-	let g:wwdc16_enable_syntax_hi_groups = 0
-<
-						*g:wwdc16_no_italics*
-Set to 1 if you want to disable italics in terminal and GUI Vim.
->
-	let g:wwdc16_no_italics = 0
-<
-						*g:wwdc16_term_italics*
-Set to 0 if you want to disable italics in the terminal.
->
-	let g:wwdc16_term_italics = 1
-<
+
+		WWDC16 color scheme    by Lifepillar
+
+WWDC16 is a colorful dark colorscheme inspired by the colors of Apple's WWDC16
+event. Apart from the fact that I shamelessly copied some color codes from the
+CSS of their web page (and changed some of them), this color scheme has
+nothing to do with Apple, so it may be safely used by Linux users as well
+(FreeBSD users won't have any problems, I guess).
+
+==============================================================================
+Colorscheme options				*wwdc16-options*
+
 						*g:wwdc16_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
 	let g:wwdc16_transp_bg = 0
 <
+ vim:tw=78:ts=8:noet:ft=help:norl:
 
-==============================================================================
-WWDC16 other options			*wwdc16-other-options*
-
-							*g:wwdc16_use16*
-Set to 1 if you want to force the use of 16 colors.
->
-	let g:wwdc16_use16 = 0
-<
-vim:tw=78:ts=8:ft=help:norl:

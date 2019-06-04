@@ -20,25 +20,10 @@ For terminals not supporting true colors, WWDC16 will fall back to use a (not so
 bad) approximate palette based on xterm's 256 colors. If you want exact colors
 in such terminals, you must set your terminal's 16 ANSI color to the WWDC16
 palette (a terminal profile for macOS's Terminal.app is included in the plugin)
-and put this in your `vimrc`:
-
-   ```vim
-   let g:wwdc16_use16 = 1
-   ```
-Be aware that, if you set the variable above, but your terminal does not use the
-WWDC16 palette, your colors will be completely off.
+and `set t_Co=16`.
 
 
 ## Options
-
-Put the following options in your `vimrc` to customize the color scheme.
-
-- **Disable italics in the terminal:**
-
-        let g:wwdc16_term_italics = 0
-
-  Italics is used by default, but it requires support from the terminal and the
-  font.
 
 - **Use a transparent background in the terminal:**
 
@@ -51,8 +36,7 @@ The color palette is available through `g:terminal_ansi_colors`.
 
 Do you want to hack the theme? Install the
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate) ftplugin and
-modify `wwdc16.colortemplate`, then rebuild the colorscheme with the
-`:Colortemplate` command.
+modify `wwdc16.colortemplate`, then rebuild the colorscheme.
 
 If you extend or improve WWDC16, please consider submitting a pull request!
 

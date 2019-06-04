@@ -1,7 +1,3 @@
-g:wwdc16_enable_syntax_hi_groups	wwdc16.txt	/*g:wwdc16_enable_syntax_hi_groups*
-g:wwdc16_no_italics	wwdc16.txt	/*g:wwdc16_no_italics*
-g:wwdc16_term_italics	wwdc16.txt	/*g:wwdc16_term_italics*
 g:wwdc16_transp_bg	wwdc16.txt	/*g:wwdc16_transp_bg*
-g:wwdc16_use16	wwdc16.txt	/*g:wwdc16_use16*
-wwdc16-colorscheme	wwdc16.txt	/*wwdc16-colorscheme*
-wwdc16-other-options	wwdc16.txt	/*wwdc16-other-options*
+wwdc16-options	wwdc16.txt	/*wwdc16-options*
+wwdc16.txt	wwdc16.txt	/*wwdc16.txt*

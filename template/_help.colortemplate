@@ -1,29 +1,27 @@
-# vim: ft=colortemplate fdm=marker ts=8
-
 documentation
-==============================================================================
-@fullname colorscheme			*@shortname-colorscheme*
+*@shortname.txt*	For Vim version @vimversion	Last change: @date
 
-				*g:@optionprefix_enable_syntax_hi_groups*
-Set to 1 to enable some filetype-specific highlight groups (not recommended).
->
-	let g:@optionprefix_enable_syntax_hi_groups = 0
-<
-						*g:@optionprefix_no_italics*
-Set to 1 if you want to disable italics in terminal and GUI Vim.
->
-	let g:@optionprefix_no_italics = 0
-<
-						*g:@optionprefix_term_italics*
-Set to 0 if you want to disable italics in the terminal.
->
-	let g:@optionprefix_term_italics = 1
-<
+
+		@fullname color scheme    by @author
+
+WWDC16 is a colorful dark colorscheme inspired by the colors of Apple's WWDC16
+event. Apart from the fact that I shamelessly copied some color codes from the
+CSS of their web page (and changed some of them), this color scheme has
+nothing to do with Apple, so it may be safely used by Linux users as well
+(FreeBSD users won't have any problems, I guess).
+
+==============================================================================
+Colorscheme options				*@shortname-options*
+
 						*g:@optionprefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
 	let g:@optionprefix_transp_bg = 0
 <
+ vim:tw=78:ts=8:noet:ft=help:norl:
+
 enddocumentation
+
+# vim: ft=colortemplate fdm=marker ts=8 tw=78
 
