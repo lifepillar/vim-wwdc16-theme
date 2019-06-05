@@ -14,6 +14,23 @@ Neovim:      yes
 Include: _help.colortemplate
 # }}}
 
+# Common linked groups {{{
+Repeat            -> Statement
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+Conditional       -> Statement
+Define            -> PreProc
+Exception         -> Statement
+Macro             -> PreProc
+PreCondit         -> PreProc
+Tag               -> Special
+Typedef           -> Type
+lCursor           -> Cursor
+# }}}
+
+Background: dark
+
 # Color palette {{{
 # Color name                GUI                  Base256    Base16
 Color: black                rgb( 41,  44,  54)   236        Black
@@ -38,60 +55,24 @@ Term Colors: brightblack brightred brightgreen brightyellow
 Term Colors: brightblue brightmagenta brightcyan brightwhite
 # }}}
 
-# Common linked groups {{{
-Repeat            -> Statement
-QuickFixLine      -> Search
-StatusLineTerm    -> StatusLine
-StatusLineTermNC  -> StatusLineNC
-Conditional       -> Statement
-Define            -> PreProc
-Exception         -> Statement
-Macro             -> PreProc
-PreCondit         -> PreProc
-Tag               -> Special
-Typedef           -> Type
-lCursor           -> Cursor
-# }}}
-
-Background: dark
-
+# Default highlight groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
 Variant: 256 8
-
-# Transparent background in terminal {{{
-verbatim
-if get(g:, '@optionprefix_transp_bg', 0)
-endverbatim
-    # Transparent background
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 8
     Normal           brightwhite       none
     CursorLineNr     brightwhite       none
     FoldColumn       white             none
     LineNr           white             none
     Terminal         brightwhite       none
-verbatim
-else
-endverbatim
-    # Opaque background
+#else
     Normal           brightwhite       black
     CursorLineNr     brightwhite       brightblack
     FoldColumn       white             brightblack
     LineNr           white             brightblack
     Terminal         brightwhite       black
-verbatim
-endif
-endverbatim
-# }}}
-
-Variant: gui
-
-Normal               brightwhite       black
-CursorLineNr         brightwhite       brightblack
-FoldColumn           white             brightblack
-LineNr               white             brightblack
-Terminal             brightwhite       black
-
-Variant: gui 256 8
-
-# Default highlight groups {{{
+#endif
 # Group              Foreground        Background        Attributes
 ColorColumn          none              brightblack
 Conceal              cyan              none
