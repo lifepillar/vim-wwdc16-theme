@@ -1,6 +1,6 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# Information {{{
+; Information {{{
 Full name:   WWDC16
 Short name:  wwdc16
 Author:      Lifepillar <lifepillar@lifepillar.me>
@@ -8,13 +8,13 @@ Website:     https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     This file is placed in the public domain
 Neovim:      yes
-# }}}
+; }}}
 
-# Documentation {{{
+; Documentation {{{
 Include: _help.colortemplate
-# }}}
+; }}}
 
-# Common linked groups {{{
+; Common linked groups {{{
 Repeat            -> Statement
 QuickFixLine      -> Search
 StatusLineTerm    -> StatusLine
@@ -27,12 +27,12 @@ PreCondit         -> PreProc
 Tag               -> Special
 Typedef           -> Type
 lCursor           -> Cursor
-# }}}
+; }}}
 
 Background: dark
 
-# Color palette {{{
-# Color name                GUI                  Base256    Base16
+; Color palette {{{
+; Color name                GUI                  Base256    Base16
 Color: black                rgb( 41,  44,  54)   236        Black
 Color: red                  rgb(230,  69,  71)   167        DarkRed
 Color: green                rgb( 66, 166,  71)   71         DarkGreen
@@ -53,9 +53,9 @@ Color: brightwhite          rgb(255, 255, 255)   231        White
 Term Colors: black red green yellow blue magenta cyan white
 Term Colors: brightblack brightred brightgreen brightyellow
 Term Colors: brightblue brightmagenta brightcyan brightwhite
-# }}}
+; }}}
 
-# Default highlight groups {{{
+; Default highlight groups {{{
 Variant: gui
 #if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
 Variant: 256 8
@@ -73,7 +73,7 @@ Variant: gui 256 8
     LineNr           white             brightblack
     Terminal         brightwhite       black
 #endif
-# Group              Foreground        Background        Attributes
+; Group              Foreground        Background        Attributes
 ColorColumn          none              brightblack
 Conceal              cyan              none
 Cursor               brightwhite       blue
@@ -115,7 +115,7 @@ Visual               blue              brightwhite       reverse
 VisualNOS            brightwhite       blue
 WarningMsg           red               none
 WildMenu             brightwhite       magenta
-# Other conventional group names (see `:help group-name`)
+; Other conventional group names (see `:help group-name`)
 Boolean              brightgreen       none
 Character            yellow            none
 Comment              white             none              italic
@@ -144,24 +144,24 @@ Todo                 magenta           none              bold
 Type                 brightmagenta     none
 Underlined           none              none              underline
 CursorIM             none              brightwhite
-# See `:help window-toolbar`
+; See `:help window-toolbar`
 ToolbarLine          none              brightblack
 ToolbarButton        cyan              brightblack       bold
-# }}}
+; }}}
 
-# Additional highlight groups {{{
+; Additional highlight groups {{{
 NormalMode           white             brightwhite       reverse
 InsertMode           brightgreen       black             reverse
 ReplaceMode          yellow            black             reverse
 VisualMode           blue              brightwhite       reverse
 CommandMode          magenta           brightwhite       reverse
-# }}}
+; }}}
 
-# NeoVim {{{
+; NeoVim {{{
 TermCursor        -> Cursor
 TermCursorNC         brightwhite       white
-# }}}
+; }}}
 
-# B&W Variant {{{
+; B&W Variant {{{
 Include: _bw.colortemplate
-# }}}
+; }}}
