@@ -1,4 +1,4 @@
-*wwdc16.txt*	For Vim version 8.2	Last change: 2021 Mar 18
+*wwdc16.txt*	For Vim version 8.2	Last change: 2022 Mar 20
 
 
 		WWDC16 color scheme    by Lifepillar
