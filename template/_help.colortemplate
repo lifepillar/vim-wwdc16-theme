@@ -1,4 +1,4 @@
-documentation
+helpfile
 *@shortname.txt*	For Vim version @vimversion	Last change: @date
 
 
@@ -13,15 +13,14 @@ nothing to do with Apple, so it may be safely used by Linux users as well
 ==============================================================================
 Colorscheme options				*@shortname-options*
 
-						*g:@optionprefix_transp_bg*
+						*g:@prefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
-	let g:@optionprefix_transp_bg = 0
+	let g:@prefix_transp_bg = 0
 <
  vim:tw=78:ts=8:noet:ft=help:norl:
 
-enddocumentation
+endhelpfile
 
 ; vim: ft=colortemplate fdm=marker ts=8 tw=78
-

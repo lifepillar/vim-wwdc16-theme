@@ -1,7 +1,7 @@
-*wwdc16.txt*	For Vim version 8.2	Last change: 2022 Mar 20
+*wwdc16.txt*	For Vim version 9	Last change: 2023 Apr 16
 
 
-		WWDC16 color scheme    by Lifepillar
+		WWDC16 color scheme    by Lifepillar <lifepillar@lifepillar.me>
 
 WWDC16 is a colorful dark colorscheme inspired by the colors of Apple's WWDC16
 event. Apart from the fact that I shamelessly copied some color codes from the
