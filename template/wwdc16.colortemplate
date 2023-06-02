@@ -73,11 +73,11 @@ FoldColumn                        white             brightblack
 LineNr                            white             brightblack
 Terminal                          brightwhite       black
 
-Normal       /256/8 +transp_bg 1  brightwhite       none
-CursorLineNr /256/8 +transp_bg 1  brightwhite       none
-FoldColumn   /256/8 +transp_bg 1  white             none
-LineNr       /256/8 +transp_bg 1  white             none
-Terminal     /256/8 +transp_bg 1  brightwhite       none
+Normal       /256/8 +transp_bg 1  omit              none              omit
+CursorLineNr /256/8 +transp_bg 1  omit              none              omit
+FoldColumn   /256/8 +transp_bg 1  omit              none              omit
+LineNr       /256/8 +transp_bg 1  omit              none              omit
+Terminal     /256/8 +transp_bg 1  omit              none              omit
 
 ColorColumn                       none              brightblack
 Conceal                           cyan              none
@@ -92,7 +92,7 @@ Directory                         brightgreen       none
 EndOfBuffer                       brightblack       none
 ErrorMsg                          red               brightwhite       reverse
 Folded                            white             brightblack       italic
-Folded       /256/8 +italic 0     white             brightblack
+Folded       /256/8 +italic 0     omit              omit
 IncSearch                         magenta           brightwhite       standout
 IncSearch    /256/8               magenta           brightwhite       reverse
 MatchParen                        brightblack       yellow            bold,reverse
@@ -130,7 +130,7 @@ WildMenu                          brightwhite       magenta
 Boolean                           brightgreen       none
 Character                         yellow            none
 Comment                           white             none              italic
-Comment      /256/8 +italic 0     white             none
+Comment      /256/8 +italic 0     omit              omit
 Constant                          yellow            none
 Debug                             magenta           none
 Delimiter                         brightwhite       none
