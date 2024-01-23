@@ -79,6 +79,8 @@ FoldColumn   /256/8 +transp_bg 1  omit              none              omit
 LineNr       /256/8 +transp_bg 1  omit              none              omit
 Terminal     /256/8 +transp_bg 1  omit              none              omit
 
+Added                             green             none
+Changed                           yellow            none
 ColorColumn                       none              brightblack
 Conceal                           cyan              none
 Cursor                            brightwhite       blue
@@ -104,6 +106,7 @@ PmenuSbar                         brightblack       brightblack
 PmenuSel                          brightwhite       yellow
 PmenuThumb                        brightblack       yellow
 Question                          white             none
+Removed                           red               none
 Search                            yellow            brightwhite       reverse
 SignColumn                        white             none
 SpecialKey                        white             none
