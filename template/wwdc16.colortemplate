@@ -65,7 +65,7 @@ Term Colors: black       red       green       yellow       blue       magenta  
 ; }}}
 
 #const transp_bg = get(g:, 'wwdc16_transp_bg', 0)
-#const italic    = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+#const italic    = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 
 ; Default highlight groups {{{
 ; Group                           Foreground        Background        Attributes
