@@ -4,9 +4,9 @@ Author:      Lifepillar <lifepillar@lifepillar.me>
 URL:         https://github.com/lifepillar/vim-wwdc16-theme
 Description: Colorful dark color scheme for Vim inspired by Apple's WWDC16 page
 License:     MIT
-Options:     backend=legacy
+Options:     backend=viml
 
-Variants:    256 8 0
+Environments: gui 256 8 0
 Background:  dark
 Include:     _help.colortemplate
 
@@ -34,6 +34,9 @@ QuickFixLine      -> Search
 Repeat            -> Statement
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
+TabPanel          -> TabLine
+TabPanelFill      -> TabLineFill
+TabPanelSel       -> TabLineSel
 Tag               -> Special
 Typedef           -> Type
 debugBreakpoint   -> SignColumn
@@ -64,120 +67,204 @@ Term Colors: black       red       green       yellow       blue       magenta  
              brightblack brightred brightgreen brightyellow brightblue brightmagenta brightcyan brightwhite
 ; }}}
 
-#const transp_bg = get(g:, 'wwdc16_transp_bg', 0)
+#const transp_bg = get(g:, '@prefix_transp_bg', 0)
 #const italic    = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 
 ; Default highlight groups {{{
-; Group                           Foreground        Background        Attributes
-Normal                            brightwhite       black
-CursorLineNr                      brightwhite       brightblack
-FoldColumn                        white             brightblack
-LineNr                            white             brightblack
-Terminal                          brightwhite       black
-
-Normal       /256/8 +transp_bg 1  omit              none              omit
-CursorLineNr /256/8 +transp_bg 1  omit              none              omit
-FoldColumn   /256/8 +transp_bg 1  omit              none              omit
-LineNr       /256/8 +transp_bg 1  omit              none              omit
-Terminal     /256/8 +transp_bg 1  omit              none              omit
-
-Added                             green             none
-Changed                           yellow            none
-ColorColumn                       none              brightblack
-Conceal                           cyan              none
-Cursor                            brightwhite       blue
-CursorColumn                      none              brightblack
-CursorLine                        none              brightblack
-DiffAdd                           brightgreen       black             reverse
-DiffChange                        yellow            brightwhite       reverse
-DiffDelete                        red               brightwhite       reverse
-DiffText                          green             brightwhite       bold,reverse
-Directory                         brightgreen       none
-EndOfBuffer                       brightblack       none
-ErrorMsg                          red               brightwhite       reverse
-Folded                            white             brightblack       italic
-Folded       /256/8 +italic 0     omit              omit
-IncSearch                         magenta           brightwhite       standout
-IncSearch    /256/8               magenta           brightwhite       reverse
-MatchParen                        brightblack       yellow            bold,reverse
-ModeMsg                           brightwhite       none
-MoreMsg                           white             none
-NonText                           brightwhite       none
-Pmenu                             black             cyan
-PmenuSbar                         brightblack       brightblack
-PmenuSel                          brightwhite       yellow
-PmenuThumb                        brightblack       yellow
-Question                          white             none
-Removed                           red               none
-Search                            yellow            brightwhite       reverse
-SignColumn                        white             none
-SpecialKey                        white             none
-SpellBad                          brightmagenta     none s=magenta    undercurl
-SpellCap                          brightmagenta     none s=magenta    undercurl
-SpellLocal                        brightmagenta     none s=magenta    undercurl
-SpellRare                         brightmagenta     none s=magenta    undercurl
-SpellBad     /256/8               brightmagenta     none              underline
-SpellCap     /256/8               brightmagenta     none              underline
-SpellLocal   /256/8               brightmagenta     none              underline
-SpellRare    /256/8               brightmagenta     none              underline
-StatusLine                        cyan              brightwhite       reverse
-StatusLineNC                      cyan              black             reverse
-TabLine                           black             cyan
-TabLineFill                       brightwhite       cyan
-TabLineSel                        brightwhite       cyan
-Title                             yellow            none              bold
-VertSplit                         brightblack       cyan
-Visual                            blue              brightwhite       reverse
-VisualNOS                         brightwhite       blue
-WarningMsg                        red               none
-WildMenu                          brightwhite       magenta
+; Group                           Foreground        Background        Other attributes
+Normal                            brightwhite       black             s=omit      ; Suppress ctermul for Neovim compatibility
+              /gui                omit              omit              s=none omit ; ...but let guisp=NONE
+              /256/8 +transp_bg 1 omit              none              s=omit omit
+CursorLineNr                      brightwhite       brightblack       s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 omit              none              s=omit omit
+FoldColumn                        white             brightblack       s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 omit              none              s=omit omit
+LineNr                            white             brightblack       s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 omit              none              s=omit omit
+Terminal                          brightwhite       black             s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 omit              none              s=omit omit
+Added                             green             none              s=omit
+              /gui                omit              omit              s=none omit
+Changed                           yellow            none              s=omit
+              /gui                omit              omit              s=none omit
+ColorColumn                       none              brightblack       s=omit
+              /gui                omit              omit              s=none omit
+Conceal                           cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+Cursor                            brightwhite       blue              s=omit
+              /gui                omit              omit              s=none omit
+CursorColumn                      none              brightblack       s=omit
+              /gui                omit              omit              s=none omit
+CursorLine                        none              brightblack       s=omit
+              /gui                omit              omit              s=none omit
+DiffAdd                           brightgreen       black             s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffChange                        yellow            brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffDelete                        red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffText                          green             brightwhite       s=omit bold,reverse
+              /gui                omit              omit              s=none omit
+Directory                         brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+EndOfBuffer                       brightblack       none              s=omit
+              /gui                omit              omit              s=none omit
+ErrorMsg                          red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+Folded                            white             brightblack       s=omit italic
+              /gui                omit              omit              s=none omit
+Folded        /256/8 +italic 0    omit              omit              s=omit
+IncSearch                         magenta           brightwhite       s=omit standout
+              /gui                omit              omit              s=none omit
+IncSearch     /256/8              magenta           brightwhite       s=omit reverse
+MatchParen                        brightblack       yellow            s=omit bold,reverse
+              /gui                omit              omit              s=none omit
+ModeMsg                           brightwhite       none              s=omit
+              /gui                omit              omit              s=none omit
+MoreMsg                           white             none              s=omit
+              /gui                omit              omit              s=none omit
+NonText                           brightwhite       none              s=omit
+              /gui                omit              omit              s=none omit
+Pmenu                             black             cyan              s=omit
+              /gui                omit              omit              s=none omit
+PmenuSbar                         brightblack       brightblack       s=omit
+              /gui                omit              omit              s=none omit
+PmenuSel                          brightwhite       yellow            s=omit
+              /gui                omit              omit              s=none omit
+PmenuThumb                        brightblack       yellow            s=omit
+              /gui                omit              omit              s=none omit
+Question                          white             none              s=omit
+              /gui                omit              omit              s=none omit
+Removed                           red               none              s=omit
+              /gui                omit              omit              s=none omit
+Search                            yellow            brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+SignColumn                        white             none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialKey                        white             none              s=omit
+              /gui                omit              omit              s=none omit
+SpellBad                          brightmagenta     none              s=omit undercurl
+              /gui                omit              omit              s=magenta omit
+              /256/8              omit              omit              s=omit underline
+SpellCap                          brightmagenta     none              s=omit undercurl
+              /gui                omit              omit              s=magenta omit
+              /256/8              omit              omit              s=omit underline
+SpellLocal                        brightmagenta     none              s=omit undercurl
+              /gui                omit              omit              s=magenta omit
+              /256/8              omit              omit              s=omit underline
+SpellRare                         brightmagenta     none              s=omit undercurl
+              /gui                omit              omit              s=magenta omit
+              /256/8              omit              omit              s=omit underline
+StatusLine                        cyan              brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+StatusLineNC                      cyan              black             s=omit reverse
+              /gui                omit              omit              s=none omit
+TabLine                           black             cyan              s=omit
+              /gui                omit              omit              s=none omit
+TabLineFill                       brightwhite       cyan              s=omit
+              /gui                omit              omit              s=none omit
+TabLineSel                        brightwhite       cyan              s=omit
+              /gui                omit              omit              s=none omit
+Title                             yellow            none              s=omit bold
+              /gui                omit              omit              s=none omit
+VertSplit                         brightblack       cyan              s=omit
+              /gui                omit              omit              s=none omit
+Visual                            blue              brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+VisualNOS                         brightwhite       blue              s=omit
+              /gui                omit              omit              s=none omit
+WarningMsg                        red               none              s=omit
+              /gui                omit              omit              s=none omit
+WildMenu                          brightwhite       magenta           s=omit
+              /gui                omit              omit              s=none omit
 ; Other conventional              group names (see `:help group-name`)
-Boolean                           brightgreen       none
-Character                         yellow            none
-Comment                           white             none              italic
-Comment      /256/8 +italic 0     omit              omit
-Constant                          yellow            none
-Debug                             magenta           none
-Delimiter                         brightwhite       none
-Error                             red               brightwhite       reverse
-Float                             brightgreen       none
-Function                          green             none
-Identifier                        brightcyan        none
-Ignore                            brightwhite       none
-Include                           red               none
-Keyword                           cyan              none
-Label                             green             none
-Number                            brightgreen       none
-Operator                          brightcyan        none
-PreProc                           magenta           none
-Special                           magenta           none
-SpecialChar                       magenta           none
-SpecialComment                    red               none
-Statement                         cyan              none
-StorageClass                      brightcyan        none
-String                            brightgreen       none
-Structure                         red               none
-Todo                              magenta           none              bold
-Type                              brightmagenta     none
-Underlined                        none              none              underline
-CursorIM                          none              brightwhite
-ToolbarLine                       none              brightblack
-ToolbarButton                     cyan              brightblack       bold
+Boolean                           brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Character                         yellow            none              s=omit
+              /gui                omit              omit              s=none omit
+Comment                           white             none              s=omit italic
+              /gui                omit              omit              s=none omit
+Comment       /256/8 +italic 0    omit              omit              s=omit
+Constant                          yellow            none              s=omit
+              /gui                omit              omit              s=none omit
+Debug                             magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+Delimiter                         brightwhite       none              s=omit
+              /gui                omit              omit              s=none omit
+Error                             red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+Float                             brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Function                          green             none              s=omit
+              /gui                omit              omit              s=none omit
+Identifier                        brightcyan        none              s=omit
+              /gui                omit              omit              s=none omit
+Ignore                            brightwhite       none              s=omit
+              /gui                omit              omit              s=none omit
+Include                           red               none              s=omit
+              /gui                omit              omit              s=none omit
+Keyword                           cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+Label                             green             none              s=omit
+              /gui                omit              omit              s=none omit
+Number                            brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Operator                          brightcyan        none              s=omit
+              /gui                omit              omit              s=none omit
+PreProc                           magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+Special                           magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialChar                       magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialComment                    red               none              s=omit
+              /gui                omit              omit              s=none omit
+Statement                         cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+StorageClass                      brightcyan        none              s=omit
+              /gui                omit              omit              s=none omit
+String                            brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Structure                         red               none              s=omit
+              /gui                omit              omit              s=none omit
+Todo                              magenta           none              s=omit bold
+              /gui                omit              omit              s=none omit
+Type                              brightmagenta     none              s=omit
+              /gui                omit              omit              s=none omit
+Underlined                        none              none              s=omit underline
+              /gui                omit              omit              s=none omit
+CursorIM                          none              brightwhite       s=omit
+              /gui                omit              omit              s=none omit
+ToolbarLine                       none              brightblack       s=omit
+              /gui                omit              omit              s=none omit
+ToolbarButton                     cyan              brightblack       s=omit bold
+              /gui                omit              omit              s=none omit
 ; }}}
 
 ; Additional highlight groups {{{
-NormalMode                        white             brightwhite       reverse
-InsertMode                        brightgreen       black             reverse
-ReplaceMode                       yellow            black             reverse
-VisualMode                        blue              brightwhite       reverse
-CommandMode                       magenta           brightwhite       reverse
+NormalMode                        white             brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+InsertMode                        brightgreen       black             s=omit reverse
+              /gui                omit              omit              s=none omit
+ReplaceMode                       yellow            black             s=omit reverse
+              /gui                omit              omit              s=none omit
+VisualMode                        blue              brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+CommandMode                       magenta           brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
 ; }}}
 
 ; NeoVim {{{
 TermCursor -> Cursor
-TermCursorNC brightwhite white
+TermCursorNC                      brightwhite       white             s=omit
+              /gui                omit              omit              s=none omit
 ; }}}
 
 Include: _bw.colortemplate
 
-; vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker cc=35,53,71 vsts=34,18,18,4
+
