@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **As of March 11, 2026, this repository is on [Codeberg](https://codeberg.org/lifepillar/vim-wwdc16-theme).**
+
 # WWDC16 Color Scheme for Vim
 
 ![WWDC16 Color Scheme](https://raw.github.com/lifepillar/Resources/master/wwdc16/wwdc16.png)
